@@ -3,9 +3,17 @@ import PySimpleGUI as sg
 window_title = "IMU GUI"
 button_text = "close window"
 
-button = [[sg.Button(button_text)]]
+# Set theme to dark green
+sg.theme('DarkGreen3')
 
-window = sg.Window(title=window_title, layout=button, margins=(800, 400))
+layout = [
+    [sg.Text("This is a test button:")],
+    [sg.Button(button_text)]
+]
+
+titlebar = sg.Titlebar(background_color="Black")
+
+window = sg.Window(title=window_title, layout=layout, margins=(800, 400), use_custom_titlebar=titlebar)
 
 # Event loop
 while True:
