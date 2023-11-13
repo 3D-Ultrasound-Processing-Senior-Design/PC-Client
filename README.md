@@ -20,11 +20,20 @@ This repository holds the software for ENSC24-43's PC-Client software.
    typing `Python: Select Interpreter`. 
    - `(sd_pc_client_env)` should appear as one of the options. Select it.
 
-## Running the project
+### Running the project
 
 - To run the project, click the run option in the toolbar above. Click `Start Debugging` and select the `PC-Client-App` configuration. Click the file
   you want to run, and select `run`.
 
 
+## GUI Technologies
+
+- For simple things, the team might consider using [pysimplegui].
+  - This python package is great for pop-up windows, and might also be good for creating a file explorer.
+- For more complex things, like the live-view of the probe, it might be better to use [`Kivy`].
+
 [Anaconda Navigator]:https://docs.anaconda.com/free/navigator/install/
 [link]:https://www.anaconda.com/download/
+
+[pysimplegui]:https://pypi.org/project/PySimpleGUI/
+[`Kivy`]:https://kivy.org/
