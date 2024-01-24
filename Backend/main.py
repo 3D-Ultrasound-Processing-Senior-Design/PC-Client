@@ -47,8 +47,6 @@
 
 import sys
 
-# sys.path.append("C:\Users\ianfl\Documents\Gonzaga\ENSC_491_Senior_Design\repos\PC-Client\Backend")
-
 import openzen
 
 openzen.set_log_level(openzen.ZenLogLevel.Warning)
