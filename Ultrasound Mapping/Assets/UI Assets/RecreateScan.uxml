@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Assets/Button.uss?fileID=7433441132597879392&amp;guid=d2221eaf122aadb478c1245756df986f&amp;type=3#Button" />
+    <Style src="project://database/Assets/UI%20Assets/HomeButtom.uss?fileID=7433441132597879392&amp;guid=1537e0a1acae1184db0758c2ebd97be5&amp;type=3#HomeButtom" />
+    <Style src="project://database/Assets/UI%20Assets/HomeButton2.uss?fileID=7433441132597879392&amp;guid=1fd355d0d95a31f459a2a546d12dec33&amp;type=3#HomeButton2" />
+    <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgb(255, 255, 255); align-items: center; justify-content: center; background-image: none; -unity-background-scale-mode: scale-and-crop; -unity-slice-left: initial; -unity-slice-top: 1; -unity-slice-right: 1; -unity-slice-bottom: 1;">
+        <ui:Label text="Select CSV File From Previous Scan" display-tooltip-when-elided="true" enable-rich-text="false" name="Label" style="justify-content: center; align-items: center; -unity-text-align: upper-center; top: 420px; font-size: 30px;" />
+        <ui:Button display-tooltip-when-elided="true" name="HomeButton" class="home-button-style" style="top: 360px;" />
+    </ui:VisualElement>
+</ui:UXML>

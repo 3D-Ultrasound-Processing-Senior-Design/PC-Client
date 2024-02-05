@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-public class UIController : MonoBehaviour
+public class MainUIController : MonoBehaviour
 {
 
     public Button newScanButton;
     public Button recreateScanButton;
+    //public Button homeButton;
     public Label textTest;
     // Start is called before the first frame update
 
@@ -21,6 +22,7 @@ public class UIController : MonoBehaviour
         
         newScanButton = root.rootVisualElement.Q<Button>("NewScan"); // setting the button to the var
         recreateScanButton = root.rootVisualElement.Q<Button>("RecreateScan"); // setting the button to the var
+        //homeButton = root.rootVisualElement.Q<Button>("HomeButton"); // setting the button to the var
         textTest = root.rootVisualElement.Q<Label>("TextTest"); // setting the text to the var
 
         newScanButton.clicked += NewScanButtonPressed; // make button call function

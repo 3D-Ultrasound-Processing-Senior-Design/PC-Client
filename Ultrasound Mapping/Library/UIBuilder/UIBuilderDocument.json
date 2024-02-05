@@ -24,42 +24,55 @@
                             "instanceID": 0
                         },
                         "m_OldPath": "Assets/UI Assets/Button.uss"
+                    },
+                    {
+                        "m_StyleSheet": {
+                            "fileID": 7433441132597879392,
+                            "guid": "1fd355d0d95a31f459a2a546d12dec33",
+                            "type": 3
+                        },
+                        "m_BackupStyleSheet": {
+                            "instanceID": 0
+                        },
+                        "m_OldPath": "Assets/UI Assets/HomeButton2.uss"
                     }
                 ],
                 "m_VisualTreeAssetBackup": {
                     "instanceID": 0
                 },
-                "m_OpenendVisualTreeAssetOldPath": "Assets/MainMenu.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Assets/NewScan.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "3b0910c9968bda24ab9a6c8518b666eb",
+                    "guid": "415676869a305844e9d485b876653726",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
-                    "instanceID": 0
+                    "fileID": 7433441132597879392,
+                    "guid": "d2221eaf122aadb478c1245756df986f",
+                    "type": 3
                 },
                 "m_Settings": {
-                    "UxmlGuid": "3b0910c9968bda24ab9a6c8518b666eb",
-                    "UxmlPath": "Assets/MainMenu.uxml",
-                    "CanvasX": 82,
-                    "CanvasY": 0,
-                    "CanvasWidth": 1450,
-                    "CanvasHeight": 765,
+                    "UxmlGuid": "415676869a305844e9d485b876653726",
+                    "UxmlPath": "Assets/UI Assets/NewScan.uxml",
+                    "CanvasX": -56,
+                    "CanvasY": 280,
+                    "CanvasWidth": 1540,
+                    "CanvasHeight": 1068,
                     "MatchGameView": false,
-                    "ZoomScale": 1.0,
+                    "ZoomScale": 0.25,
                     "PanOffset": {
-                        "x": -579.2918701171875,
-                        "y": -172.5864715576172
+                        "x": 127.3916015625,
+                        "y": 72.71539306640625
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,
                     "CameraModeCanvasBackgroundOpacity": 1.0,
-                    "EnableCanvasBackground": true,
+                    "EnableCanvasBackground": false,
                     "CanvasBackgroundMode": 0,
                     "CanvasBackgroundColor": {
-                        "r": 1.0,
-                        "g": 1.0,
-                        "b": 1.0,
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
                         "a": 255.0
                     },
                     "CanvasBackgroundImage": {

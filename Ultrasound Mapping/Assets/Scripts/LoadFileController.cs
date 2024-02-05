@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using SimpleFileBrowser;
+using UnityEngine.SceneManagement;
 
 public class LoadFileController : MonoBehaviour
 {
