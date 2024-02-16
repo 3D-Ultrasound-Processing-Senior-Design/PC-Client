@@ -37,9 +37,6 @@
                         "m_OldPath": "Assets/UI Assets/HomeButton2.uss"
                     }
                 ],
-                "m_VisualTreeAssetBackup": {
-                    "instanceID": 0
-                },
                 "m_OpenendVisualTreeAssetOldPath": "Assets/UI Assets/NewScan.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
@@ -59,10 +56,10 @@
                     "CanvasWidth": 1540,
                     "CanvasHeight": 1068,
                     "MatchGameView": false,
-                    "ZoomScale": 0.25,
+                    "ZoomScale": 0.550000011920929,
                     "PanOffset": {
-                        "x": 127.3916015625,
-                        "y": 72.71539306640625
+                        "x": -88.4749755859375,
+                        "y": -164.57025146484376
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,

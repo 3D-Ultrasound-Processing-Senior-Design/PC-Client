@@ -957,6 +957,10 @@ namespace UnityEngine.UI
             Button blockerButton = blocker.AddComponent<Button>();
             blockerButton.onClick.AddListener(Hide);
 
+            //add canvas group to ensure clicking outside the dropdown will hide it (UUM-33691)
+            CanvasGroup blockerCanvasGroup = blocker.AddComponent<CanvasGroup>();
+            blockerCanvasGroup.ignoreParentGroups = true;
+
             return blocker;
         }
 
