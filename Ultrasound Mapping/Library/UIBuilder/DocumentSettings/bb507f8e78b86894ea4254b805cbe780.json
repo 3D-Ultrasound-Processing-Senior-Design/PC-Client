@@ -1,0 +1,30 @@
+{
+    "UxmlGuid": "bb507f8e78b86894ea4254b805cbe780",
+    "UxmlPath": "Assets/UI Assets/RecreateScan.uxml",
+    "CanvasX": 42,
+    "CanvasY": 0,
+    "CanvasWidth": 1536,
+    "CanvasHeight": 991,
+    "MatchGameView": false,
+    "ZoomScale": 0.25,
+    "PanOffset": {
+        "x": 129.11651611328126,
+        "y": 52.816619873046878
+    },
+    "ColorModeBackgroundOpacity": 1.0,
+    "ImageModeCanvasBackgroundOpacity": 1.0,
+    "CameraModeCanvasBackgroundOpacity": 1.0,
+    "EnableCanvasBackground": false,
+    "CanvasBackgroundMode": 0,
+    "CanvasBackgroundColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 255.0
+    },
+    "CanvasBackgroundImage": {
+        "instanceID": 0
+    },
+    "CanvasBackgroundImageScaleMode": 1,
+    "CanvasBackgroundCameraName": ""
+}

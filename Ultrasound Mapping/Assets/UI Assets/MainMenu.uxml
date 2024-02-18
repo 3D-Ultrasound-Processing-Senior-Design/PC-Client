@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Assets/Button.uss?fileID=7433441132597879392&amp;guid=d2221eaf122aadb478c1245756df986f&amp;type=3#Button" />
+    <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgb(255, 255, 255); align-items: center; justify-content: center;">
+        <ui:VisualElement style="height: 600px; width: 500px; border-left-width: 15px; border-right-width: 15px; border-top-width: 15px; border-bottom-width: 15px; background-color: rgb(0, 207, 255); align-items: center; justify-content: center; border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px;">
+            <ui:Label text="Ultrasound Scan &#10;Mapping" display-tooltip-when-elided="true" focusable="false" style="-unity-font-style: normal; font-size: 60px; position: absolute; top: 10px; -unity-text-align: upper-center;" />
+            <ui:Button text="New Scan" display-tooltip-when-elided="true" name="NewScan" class="button-style" style="margin-top: 4px; width: 400px; height: 140px; top: 40px;" />
+            <ui:Button text="Recreate Scan" display-tooltip-when-elided="false" name="RecreateScan" class="button-style" style="height: 140px; width: 400px; top: 80px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
