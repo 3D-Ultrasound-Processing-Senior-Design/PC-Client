@@ -62,6 +62,7 @@ public class NewScanUIController : MonoBehaviour
 
     }
     void saveButtonPressed(){
+        Debug.Log("save button pressed");
         string title = "Save File";
         string directory = "/ ";
         string defaultName = "scan";

@@ -5,5 +5,6 @@
     <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgb(255, 255, 255); align-items: center; justify-content: center; background-image: none; -unity-background-scale-mode: scale-and-crop; -unity-slice-left: initial; -unity-slice-top: 1; -unity-slice-right: 1; -unity-slice-bottom: 1;">
         <ui:Label text="Select CSV File From Previous Scan" display-tooltip-when-elided="true" enable-rich-text="false" name="Label" style="justify-content: center; align-items: center; -unity-text-align: upper-center; top: 420px; font-size: 30px;" />
         <ui:Button display-tooltip-when-elided="true" name="HomeButton" class="home-button-style" style="top: 360px;" />
+        <ui:Button text="Load Scan" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LoadButton" />
     </ui:VisualElement>
 </ui:UXML>
