@@ -77,6 +77,13 @@ MonoBehaviour:
   - __PanelContainer__rootVisualContainer__main-view-split-view__middle-right-split-view__viewport-preview-split-view__uxml-uss-split-view__UnityEngine.UIElements.TwoPaneSplitView
   - __PanelContainer__rootVisualContainer__main-view-split-view__middle-right-split-view__unity-ui-builder-inspector__builder-inspector-attributes-inherited-styles-foldout__builder-inspector-matching-selectors-container-foldout__builder-inspector-rule-foldout__5__Unity.UI.Builder.PersistedFoldout
   - __PanelContainer__rootVisualContainer__main-view-split-view__explorer-library-split-view__unity-ui-builder-library__unity-ui-builder-library-project-view__samples-tree__UnityEngine.UIElements.TreeView
+  - __PanelContainer__rootVisualContainer__main-view-split-view__middle-right-split-view__viewport-preview-split-view__unity-builder-viewport__canvas__t__UnityEngine.UIElements.FloatField
+  - __PanelContainer__rootVisualContainer__main-view-split-view__middle-right-split-view__viewport-preview-split-view__unity-builder-viewport__canvas__ta__UnityEngine.UIElements.FloatField
+  - __PanelContainer__rootVisualContainer__main-view-split-view__middle-right-split-view__viewport-preview-split-view__unity-builder-viewport__canvas__tar__UnityEngine.UIElements.FloatField
+  - __PanelContainer__rootVisualContainer__main-view-split-view__middle-right-split-view__viewport-preview-split-view__unity-builder-viewport__canvas__targ__UnityEngine.UIElements.FloatField
+  - __PanelContainer__rootVisualContainer__main-view-split-view__middle-right-split-view__viewport-preview-split-view__unity-builder-viewport__canvas__targe__UnityEngine.UIElements.FloatField
+  - __PanelContainer__rootVisualContainer__main-view-split-view__middle-right-split-view__viewport-preview-split-view__unity-builder-viewport__canvas__target__UnityEngine.UIElements.FloatField
+  - __PanelContainer__rootVisualContainer__main-view-split-view__middle-right-split-view__viewport-preview-split-view__unity-builder-viewport__canvas__targetx__UnityEngine.UIElements.FloatField
   m_Values:
   - '{}'
   - '{}'
@@ -91,13 +98,13 @@ MonoBehaviour:
   - '{}'
   - '{}'
   - '{"m_ShowPackageTemplates":false,"m_ViewMode":0,"m_ActiveTab":0}'
-  - '{"m_SelectedItemId":-2090534668}'
+  - '{"m_SelectedItemId":271258168}'
   - '{}'
   - '{}'
   - '{}'
   - '{}'
   - '{}'
-  - '{"m_CachedScrollPositionCount":5,"m_OldestScrollPositionIndex":2,"m_CachedContentHeights":[2513.60009765625,2602.0,2468.0,2429.60009765625,2352.0],"m_CachedScrollPositions":[{"scrollPosition":1105.7998046875,"maxScrollValue":1975.2001953125},{"scrollPosition":0.0,"maxScrollValue":1682.0},{"scrollPosition":698.4000854492188,"maxScrollValue":1924.0},{"scrollPosition":0.0,"maxScrollValue":1891.2001953125},{"scrollPosition":0.0,"maxScrollValue":1813.60009765625}]}'
+  - '{"m_CachedScrollPositionCount":5,"m_OldestScrollPositionIndex":1,"m_CachedContentHeights":[2728.0,2602.0,2560.0,2407.0,2622.0],"m_CachedScrollPositions":[{"scrollPosition":0.0,"maxScrollValue":1808.0},{"scrollPosition":0.0,"maxScrollValue":1682.0},{"scrollPosition":1640.0,"maxScrollValue":1640.0},{"scrollPosition":0.0,"maxScrollValue":1487.0},{"scrollPosition":0.0,"maxScrollValue":1702.0}]}'
   - '{"m_Value":true}'
   - '{"m_Value":true}'
   - '{"m_Value":true}'
@@ -120,10 +127,10 @@ MonoBehaviour:
   - '{"m_Value":true}'
   - '{"m_Value":false}'
   - '{"m_Value":false}'
-  - '{}'
-  - '{}'
-  - '{}'
-  - '{}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
+  - '{"m_Value":false}'
   - '{}'
   - '{}'
   - '{}'
@@ -134,11 +141,18 @@ MonoBehaviour:
   - '{"m_FixedPaneDimension":200.0}'
   - '{"m_ElementInfoVisibilityState":0}'
   - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":0,"anchorOffset":0.0},"m_ExpandedItemIds":[5,1]}'
-  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":0,"anchorOffset":0.0},"m_ExpandedItemIds":[1,-2090380703,2117896706]}'
-  - '{"m_Value":174.14974975585938,"m_LowValue":0.0,"m_HighValue":399.0}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":0,"anchorOffset":0.0},"m_ExpandedItemIds":[1,186169660,988110409,2117896706,-122431135]}'
+  - '{"m_Value":336.1497497558594,"m_LowValue":0.0,"m_HighValue":399.0}'
   - '{"m_Value":0.0,"m_LowValue":0.0,"m_HighValue":0.0}'
   - '{"m_FixedPaneDimension":300.0}'
   - '{"m_FixedPaneDimension":20.0}'
   - '{"m_FixedPaneDimension":200.0}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
   - '{}'
   - '{}'

@@ -14,6 +14,11 @@ public class RecreateScanUIController : MonoBehaviour
 
     public Button homeButton;
     public Button loadButton;
+    public FloatField targetX;
+    public FloatField targetY;
+    public FloatField targetZ;
+
+
     public LoadFileController fileManagerObject;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +26,9 @@ public class RecreateScanUIController : MonoBehaviour
         var root = GetComponent<UIDocument>(); // Get UI document to reference
         homeButton = root.rootVisualElement.Q<Button>("HomeButton"); // setting the text to the var
         loadButton = root.rootVisualElement.Q<Button>("LoadButton");
+        targetX = root.rootVisualElement.Q<FloatField>("TargetX");
+        targetY = root.rootVisualElement.Q<FloatField>("TargetY");
+        targetZ = root.rootVisualElement.Q<FloatField>("TargetZ");
         // fileManagerObject = FindObjectOfType<LoadFileController>();
         homeButton.clicked += homeButtonPressed; // make button call function
         loadButton.clicked += loadButtonPressed; // assign the appropriate callback function.
@@ -32,7 +40,6 @@ public class RecreateScanUIController : MonoBehaviour
         FileBrowser.HideDialog(true);
         Debug.Log("Home button pressed");
         SceneManager.LoadScene("MainMenuScene");
-
     }
 
     void loadButtonPressed()
@@ -94,6 +101,9 @@ public class RecreateScanUIController : MonoBehaviour
             }
             foreach (var coloumn1 in listA)
             {
+                targetX.value = listA[0];
+                targetY.value = listA[1];
+                targetZ.value = listA[2];
                 Debug.Log( coloumn1 );
             }
         }

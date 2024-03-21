@@ -28,17 +28,6 @@
                     {
                         "m_StyleSheet": {
                             "fileID": 7433441132597879392,
-                            "guid": "1537e0a1acae1184db0758c2ebd97be5",
-                            "type": 3
-                        },
-                        "m_BackupStyleSheet": {
-                            "instanceID": 0
-                        },
-                        "m_OldPath": "Assets/UI Assets/HomeButtom.uss"
-                    },
-                    {
-                        "m_StyleSheet": {
-                            "fileID": 7433441132597879392,
                             "guid": "1fd355d0d95a31f459a2a546d12dec33",
                             "type": 3
                         },
@@ -48,27 +37,27 @@
                         "m_OldPath": "Assets/UI Assets/HomeButton2.uss"
                     }
                 ],
-                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Assets/RecreateScan.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Assets/NewScan.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "bb507f8e78b86894ea4254b805cbe780",
+                    "guid": "415676869a305844e9d485b876653726",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
                     "instanceID": 0
                 },
                 "m_Settings": {
-                    "UxmlGuid": "bb507f8e78b86894ea4254b805cbe780",
-                    "UxmlPath": "Assets/UI Assets/RecreateScan.uxml",
-                    "CanvasX": 42,
-                    "CanvasY": 0,
-                    "CanvasWidth": 1536,
-                    "CanvasHeight": 991,
+                    "UxmlGuid": "415676869a305844e9d485b876653726",
+                    "UxmlPath": "Assets/UI Assets/NewScan.uxml",
+                    "CanvasX": -56,
+                    "CanvasY": 280,
+                    "CanvasWidth": 1540,
+                    "CanvasHeight": 1068,
                     "MatchGameView": false,
-                    "ZoomScale": 0.44999998807907107,
+                    "ZoomScale": 0.550000011920929,
                     "PanOffset": {
-                        "x": 176.8809814453125,
-                        "y": 65.76268005371094
+                        "x": 75.6806640625,
+                        "y": -112.592529296875
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,

@@ -5,6 +5,9 @@
     <ui:VisualElement name="Background" style="flex-grow: 1; background-color: rgb(255, 255, 255); align-items: center; justify-content: center; background-image: none; -unity-background-scale-mode: scale-and-crop; -unity-slice-left: initial; -unity-slice-top: 1; -unity-slice-right: 1; -unity-slice-bottom: 1;">
         <ui:Label text="Select CSV File From Previous Scan" display-tooltip-when-elided="true" enable-rich-text="false" name="Label" style="justify-content: center; align-items: center; -unity-text-align: upper-center; top: 420px; font-size: 30px;" />
         <ui:Button display-tooltip-when-elided="true" name="HomeButton" class="home-button-style" style="top: 360px;" />
-        <ui:Button text="Load Scan" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LoadButton" />
+        <ui:Button text="Load Scan" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LoadButton" style="left: 0; top: 25%; bottom: 30%; right: 30%; font-size: 24px; color: rgb(0, 0, 0); background-color: rgb(253, 253, 253); -unity-text-outline-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; text-overflow: ellipsis;" />
+        <ui:FloatField label="Target X" value="42.2" name="TargetX" style="left: 570px;" />
+        <ui:FloatField label="Target Y" value="42.2" name="TargetY" style="align-self: flex-start; justify-content: flex-end; left: 80%;" />
+        <ui:FloatField label="Target Z" value="42.2" name="TargetZ" style="justify-content: flex-end; left: 570px;" />
     </ui:VisualElement>
 </ui:UXML>
