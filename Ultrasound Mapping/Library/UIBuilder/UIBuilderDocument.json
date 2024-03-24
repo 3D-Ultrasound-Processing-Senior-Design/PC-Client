@@ -28,6 +28,17 @@
                     {
                         "m_StyleSheet": {
                             "fileID": 7433441132597879392,
+                            "guid": "1537e0a1acae1184db0758c2ebd97be5",
+                            "type": 3
+                        },
+                        "m_BackupStyleSheet": {
+                            "instanceID": 0
+                        },
+                        "m_OldPath": "Assets/UI Assets/HomeButtom.uss"
+                    },
+                    {
+                        "m_StyleSheet": {
+                            "fileID": 7433441132597879392,
                             "guid": "1fd355d0d95a31f459a2a546d12dec33",
                             "type": 3
                         },
@@ -37,27 +48,29 @@
                         "m_OldPath": "Assets/UI Assets/HomeButton2.uss"
                     }
                 ],
-                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Assets/NewScan.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Assets/RecreateScan.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "415676869a305844e9d485b876653726",
+                    "guid": "bb507f8e78b86894ea4254b805cbe780",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
-                    "instanceID": 0
+                    "fileID": 7433441132597879392,
+                    "guid": "d2221eaf122aadb478c1245756df986f",
+                    "type": 3
                 },
                 "m_Settings": {
-                    "UxmlGuid": "415676869a305844e9d485b876653726",
-                    "UxmlPath": "Assets/UI Assets/NewScan.uxml",
-                    "CanvasX": -56,
-                    "CanvasY": 280,
-                    "CanvasWidth": 1540,
-                    "CanvasHeight": 1068,
+                    "UxmlGuid": "bb507f8e78b86894ea4254b805cbe780",
+                    "UxmlPath": "Assets/UI Assets/RecreateScan.uxml",
+                    "CanvasX": 42,
+                    "CanvasY": 0,
+                    "CanvasWidth": 1536,
+                    "CanvasHeight": 991,
                     "MatchGameView": false,
-                    "ZoomScale": 0.550000011920929,
+                    "ZoomScale": 0.8500000238418579,
                     "PanOffset": {
-                        "x": 75.6806640625,
-                        "y": -112.592529296875
+                        "x": 358.29632568359377,
+                        "y": 200.32557678222657
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,

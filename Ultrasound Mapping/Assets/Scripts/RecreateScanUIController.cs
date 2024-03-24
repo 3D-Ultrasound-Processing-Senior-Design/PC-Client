@@ -18,8 +18,16 @@ public class RecreateScanUIController : MonoBehaviour
     public FloatField targetY;
     public FloatField targetZ;
 
+    // irf-todo: add these to the UI
+    public FloatField XAngle;
+    public FloatField YAngle;
+    public FloatField ZAngle;
 
+    // public GameObject lpmsModel;
+    public GameObject lpmsModel_grayed;
     public LoadFileController fileManagerObject;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +37,23 @@ public class RecreateScanUIController : MonoBehaviour
         targetX = root.rootVisualElement.Q<FloatField>("TargetX");
         targetY = root.rootVisualElement.Q<FloatField>("TargetY");
         targetZ = root.rootVisualElement.Q<FloatField>("TargetZ");
+
+        lpmsModel_grayed = GameObject.Find("lpms-cu3(grayed)");
+
         // fileManagerObject = FindObjectOfType<LoadFileController>();
         homeButton.clicked += homeButtonPressed; // make button call function
         loadButton.clicked += loadButtonPressed; // assign the appropriate callback function.
+
     }
 
-    // Update is called once per frame
+
+    void Update()
+    {
+        // XAngle.value = (lpmsModel.transform.rotation.x) * 180;
+        // YAngle.value = (lpmsModel.transform.rotation.y) * 180;
+        // ZAngle.value = (lpmsModel.transform.rotation.z) * 180;
+    }
+
     void homeButtonPressed(){
         //fileManagerObject.FileBrowser.HideDialog(true);
         FileBrowser.HideDialog(true);
@@ -108,7 +127,10 @@ public class RecreateScanUIController : MonoBehaviour
             }
         }
 
-		// Or, copy the first file to persistentDataPath
+        // move the grayed out model to the correct orientation
+        lpmsModel_grayed.transform.rotation = Quaternion.Euler(targetX.value, targetY.value, targetZ.value);
+
+        // Or, copy the first file to persistentDataPath
 		string destinationPath = Path.Combine( Application.persistentDataPath, FileBrowserHelpers.GetFilename( filePath ) );
 		FileBrowserHelpers.CopyFile( filePath, destinationPath );
 	}
