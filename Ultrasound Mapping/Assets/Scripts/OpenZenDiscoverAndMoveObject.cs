@@ -15,7 +15,10 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         public string Identifier;
         public uint BaudRate;
     }
+    
     NewScanUIController uiGameObject; // declare object from new scan UI
+    RecreateScanUIController reCreateObject;
+
     Dropdown mDropdownSensorSelect;
     Button mConnectButton;
     GameObject mObjConnectButton;
@@ -35,6 +38,8 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         // create OpenZen and start asynchronous sensor discovery
         OpenZen.ZenInit(mZenHandle);
         OpenZen.ZenListSensorsAsync(mZenHandle);
+
+        reCreateObject = FindObjectOfType<RecreateScanUIController>();
 
         // mDropdownSensorSelect = GameObject.Find("dropdownSensorSelect").GetComponent<Dropdown>();
         // mObjConnectButton = GameObject.Find("buttonConnectSensor");
@@ -69,6 +74,7 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         {
             print("Succesfully connected to sensor");
             uiGameObject.IMUConnected();
+            reCreateObject.IMUConnected();
             //mConnectCanvas.SetActive(false);
             //mErrorConnect.SetActive(false);
 

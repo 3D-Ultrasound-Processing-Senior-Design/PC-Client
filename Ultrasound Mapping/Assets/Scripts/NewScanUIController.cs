@@ -8,6 +8,7 @@ using System.IO;
 using UnityEditor;
 using System.Text;
 
+// irf-question: do we need this? doesn't seem to be referenced anywhere
 public class Scan
 {
     public float x { get; set; }

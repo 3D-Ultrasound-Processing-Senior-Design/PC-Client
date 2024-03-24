@@ -1,10 +1,12 @@
 using System.Collections;
-using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using SimpleFileBrowser;
+using System.IO;
+using UnityEditor;
+using System.Text;
 
 // to access CultureInfo
 using System.Globalization;
@@ -25,7 +27,9 @@ public class RecreateScanUIController : MonoBehaviour
     public FloatField YAngle;
     public FloatField ZAngle;
 
-    // public GameObject lpmsModel;
+    public Label connectText;
+
+    public GameObject lpmsModel;
     public GameObject lpmsModel_grayed;
     public LoadFileController fileManagerObject;
 
@@ -36,9 +40,15 @@ public class RecreateScanUIController : MonoBehaviour
         var root = GetComponent<UIDocument>(); // Get UI document to reference
         homeButton = root.rootVisualElement.Q<Button>("HomeButton"); // setting the text to the var
         loadButton = root.rootVisualElement.Q<Button>("LoadButton");
+        connectText = root.rootVisualElement.Q<Label>("ConnectLabel");
+
         targetX = root.rootVisualElement.Q<FloatField>("TargetX");
         targetY = root.rootVisualElement.Q<FloatField>("TargetY");
         targetZ = root.rootVisualElement.Q<FloatField>("TargetZ");
+
+        XAngle = root.rootVisualElement.Q<FloatField>("actualX");
+        YAngle = root.rootVisualElement.Q<FloatField>("actualY");
+        ZAngle = root.rootVisualElement.Q<FloatField>("actualZ");
 
         lpmsModel_grayed = GameObject.Find("lpms-cu3(grayed)");
 
@@ -50,9 +60,9 @@ public class RecreateScanUIController : MonoBehaviour
     void Update()
     {
         // irf-todo: check that the opaque model works when you have the actual imu on hand.
-        // XAngle.value = (lpmsModel.transform.rotation.x) * 180;
-        // YAngle.value = (lpmsModel.transform.rotation.y) * 180;
-        // ZAngle.value = (lpmsModel.transform.rotation.z) * 180;
+        XAngle.value = (lpmsModel.transform.rotation.x) * 180;
+        YAngle.value = (lpmsModel.transform.rotation.y) * 180;
+        ZAngle.value = (lpmsModel.transform.rotation.z) * 180;
     }
 
     void homeButtonPressed(){
@@ -61,6 +71,13 @@ public class RecreateScanUIController : MonoBehaviour
         SceneManager.LoadScene("MainMenuScene");
     }
 
+    public void IMUConnected(){
+        Debug.Log("IMU CONNECTED FUNC CALLED");
+        Debug.Log("Set Text to COnnected");
+        connectText.text = "IMU Connected";
+        connectText.style.color = new StyleColor(Color.green);
+        //connectText.text.color = Color.green;
+    }
     void loadButtonPressed()
     {
         Debug.Log("load scan button pressed");
