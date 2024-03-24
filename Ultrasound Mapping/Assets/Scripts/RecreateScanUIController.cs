@@ -14,11 +14,13 @@ public class RecreateScanUIController : MonoBehaviour
 
     public Button homeButton;
     public Button loadButton;
+
+    // these three for the "grayed out" model.
     public FloatField targetX;
     public FloatField targetY;
     public FloatField targetZ;
 
-    // irf-todo: add these to the UI
+    // irf-todo: add these to the UI (for the opaque model)
     public FloatField XAngle;
     public FloatField YAngle;
     public FloatField ZAngle;
@@ -40,22 +42,20 @@ public class RecreateScanUIController : MonoBehaviour
 
         lpmsModel_grayed = GameObject.Find("lpms-cu3(grayed)");
 
-        // fileManagerObject = FindObjectOfType<LoadFileController>();
         homeButton.clicked += homeButtonPressed; // make button call function
         loadButton.clicked += loadButtonPressed; // assign the appropriate callback function.
-
     }
 
 
     void Update()
     {
+        // irf-todo: check that the opaque model works when you have the actual imu on hand.
         // XAngle.value = (lpmsModel.transform.rotation.x) * 180;
         // YAngle.value = (lpmsModel.transform.rotation.y) * 180;
         // ZAngle.value = (lpmsModel.transform.rotation.z) * 180;
     }
 
     void homeButtonPressed(){
-        //fileManagerObject.FileBrowser.HideDialog(true);
         FileBrowser.HideDialog(true);
         Debug.Log("Home button pressed");
         SceneManager.LoadScene("MainMenuScene");
@@ -64,10 +64,8 @@ public class RecreateScanUIController : MonoBehaviour
     void loadButtonPressed()
     {
         Debug.Log("load scan button pressed");
-        // string paths = "/";
-        // FileBrowser.ShowLoadDialog( ( paths ) => { Debug.Log( "Selected: " + paths[0] ); },
-        //                            () => { Debug.Log( "Canceled" ); },
-        //                            FileBrowser.PickMode.Files, false, null, null, "Select File", "Select" );
+        
+        // simple file manager co-routine
         StartCoroutine( ShowLoadDialogCoroutine() );
     }
 
@@ -109,6 +107,7 @@ public class RecreateScanUIController : MonoBehaviour
         StreamReader reader = null;
         reader = new StreamReader(File.OpenRead( filePath ));
         
+        // apparently C# has a garbage collector so we don't need to delete this.
         List<float> listA = new List<float>();
         while (!reader.EndOfStream)
         {   
