@@ -396,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714f106d1794d5d488e428f5bf3f5a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lpmsModel: {fileID: 0}
   lpmsModel_grayed: {fileID: 0}
   fileManagerObject: {fileID: 0}
 --- !u!1 &425022475

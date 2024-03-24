@@ -50,6 +50,7 @@ public class RecreateScanUIController : MonoBehaviour
         YAngle = root.rootVisualElement.Q<FloatField>("actualY");
         ZAngle = root.rootVisualElement.Q<FloatField>("actualZ");
 
+        lpmsModel = GameObject.Find("lpms-cu3");
         lpmsModel_grayed = GameObject.Find("lpms-cu3(grayed)");
 
         homeButton.clicked += homeButtonPressed; // make button call function
