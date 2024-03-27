@@ -8,6 +8,7 @@ using System.IO;
 using UnityEditor;
 using System.Text;
 
+// irf-question: do we need this? doesn't seem to be referenced anywhere
 public class Scan
 {
     public float x { get; set; }
@@ -62,6 +63,7 @@ public class NewScanUIController : MonoBehaviour
 
     }
     void saveButtonPressed(){
+        Debug.Log("save button pressed");
         string title = "Save File";
         string directory = "/ ";
         string defaultName = "scan";
