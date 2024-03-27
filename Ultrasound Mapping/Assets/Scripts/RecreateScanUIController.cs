@@ -73,7 +73,7 @@ public class RecreateScanUIController : MonoBehaviour
     }
 
     public void IMUConnected(){
-        Debug.Log("IMU CONNECTED FUNC CALLED");
+        Debug.Log("re create scan imu connected function called...");
         Debug.Log("Set Text to COnnected");
         connectText.text = "IMU Connected";
         connectText.style.color = new StyleColor(Color.green);
