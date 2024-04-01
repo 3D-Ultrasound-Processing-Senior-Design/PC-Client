@@ -13,9 +13,11 @@ using System.Globalization;
 
 public class RecreateScanUIController : MonoBehaviour
 {
+    public Quaternion zeroOffset = Quaternion.identity;
 
     public Button homeButton;
     public Button loadButton;
+    public Button zeroButton;
 
     // these three for the "grayed out" model.
     public FloatField targetX;
@@ -41,6 +43,7 @@ public class RecreateScanUIController : MonoBehaviour
         homeButton = root.rootVisualElement.Q<Button>("HomeButton"); // setting the text to the var
         loadButton = root.rootVisualElement.Q<Button>("LoadButton");
         connectText = root.rootVisualElement.Q<Label>("ConnectLabel");
+        zeroButton = root.rootVisualElement.Q<Button>("ZeroButton");
 
         targetX = root.rootVisualElement.Q<FloatField>("TargetX");
         targetY = root.rootVisualElement.Q<FloatField>("TargetY");
@@ -55,6 +58,7 @@ public class RecreateScanUIController : MonoBehaviour
 
         homeButton.clicked += homeButtonPressed; // make button call function
         loadButton.clicked += loadButtonPressed; // assign the appropriate callback function.
+        zeroButton.clicked += zeroButtonPressed;
     }
 
 
@@ -85,6 +89,11 @@ public class RecreateScanUIController : MonoBehaviour
         
         // simple file manager co-routine
         StartCoroutine( ShowLoadDialogCoroutine() );
+    }
+    void zeroButtonPressed()
+    {
+        zeroOffset = lpmsModel.transform.rotation*zeroOffset;
+        Debug.Log("zero offset: " + zeroOffset);
     }
 
     IEnumerator ShowLoadDialogCoroutine()

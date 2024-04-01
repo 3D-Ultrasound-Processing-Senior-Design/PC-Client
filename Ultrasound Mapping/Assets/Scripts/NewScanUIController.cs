@@ -62,25 +62,33 @@ public class NewScanUIController : MonoBehaviour
         SceneManager.LoadScene("MainMenuScene");
 
     }
-    void saveButtonPressed(){
+    void saveButtonPressed() {
+        /*
         Debug.Log("save button pressed");
         string title = "Save File";
         string directory = "/ ";
         string defaultName = "scan";
         string extension = ".csv";
-        string path = EditorUtility.SaveFilePanelInProject("Save csv", defaultName, "csv",
-            "Please enter a file name to save the scan to");
-        string scanData = XAngle.value + "," + YAngle.value + "," + ZAngle.value;
-        if (path.Length != 0)
+        string path;
+        try
         {
-            using (var stream = File.Open(path, FileMode.Append))
-            using (var writer = new StreamWriter(stream))
+            path = EditorUtility.SaveFilePanelInProject("Save csv", defaultName, "csv",
+                "Please enter a file name to save the scan to");
+        
+            string scanData = XAngle.value + "," + YAngle.value + "," + ZAngle.value;
+            if (path.Length != 0)
             {
-                writer.WriteLine(scanData);
+                using (var stream = File.Open(path, FileMode.Append))
+                using (var writer = new StreamWriter(stream))
+                {
+                    writer.WriteLine(scanData);
+                }
+                // As we are saving to the asset folder, tell Unity to scan for modified or new assets
+                AssetDatabase.Refresh();
             }
-            // As we are saving to the asset folder, tell Unity to scan for modified or new assets
-            AssetDatabase.Refresh();
         }
+        catch { }
+        */
     }
     public void IMUConnected(){
         Debug.Log("IMU CONNECTED FUNC CALLED");
