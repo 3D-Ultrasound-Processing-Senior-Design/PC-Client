@@ -9,6 +9,9 @@ using UnityEngine.UI;
  */
 public class OpenZenDiscoverAndMoveObject : MonoBehaviour
 {
+    public GameObject zeroOffsetObject;
+    public Quaternion zeroOffset;
+
     struct SensorListResult
     {
         public string IoType;
@@ -38,6 +41,7 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         // create OpenZen and start asynchronous sensor discovery
         OpenZen.ZenInit(mZenHandle);
         OpenZen.ZenListSensorsAsync(mZenHandle);
+        
 
         reCreateObject = FindObjectOfType<RecreateScanUIController>();
 
@@ -113,6 +117,10 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         // run as long as there are new OpenZen events to process
         while (true)
         {
+            zeroOffset = zeroOffsetObject.GetComponent<RecreateScanUIController>().zeroOffset;
+
+            Debug.Log("zero offset in OpenZen controller: " + zeroOffset); 
+
             ZenEvent zenEvent = new ZenEvent();
             // read all events which are waiting for us
             // use the rotation from the newest IMU event
@@ -177,7 +185,8 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
                                                                     -fq.getitem(2),
                                                                     -fq.getitem(3),
                                                                     fq.getitem(0));
-                        transform.rotation = sensorOrientation;
+                        transform.rotation = sensorOrientation * Quaternion.Inverse(zeroOffset);
+                        Debug.Log("zero offset in OpenZen controller: " + zeroOffset);
                         break;
                 }
             }
