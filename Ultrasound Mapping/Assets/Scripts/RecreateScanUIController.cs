@@ -14,6 +14,8 @@ using System.Globalization;
 public class RecreateScanUIController : MonoBehaviour
 {
     public Quaternion zeroOffset = Quaternion.identity;
+    public GameObject xEulerAngleObject;
+        
 
     public Button homeButton;
     public Button loadButton;
@@ -65,9 +67,20 @@ public class RecreateScanUIController : MonoBehaviour
     void Update()
     {
         // irf-todo: check that the opaque model works when you have the actual imu on hand.
-        XAngle.value = (lpmsModel.transform.rotation.x) * 180;
-        YAngle.value = (lpmsModel.transform.rotation.y) * 180;
-        ZAngle.value = (lpmsModel.transform.rotation.z) * 180;
+
+        //Debug.Log("Euler Angles: " + lpmsModel.transform.eulerAngles);
+        XAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle;
+        Debug.Log(" value imported : " + xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle);
+        //XAngle.value = lpmsModel.transform.eulerAngles.x; //lpmsModel.transform.eulerAngles.x;
+        YAngle.value = (lpmsModel.transform.eulerAngles.y);//(float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().yEulerAngle; // 
+        if (YAngle.value > 180)
+        {
+            YAngle.value = YAngle.value - 360;
+        }
+        ZAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().zEulerAngle; // lpmsModel.transform.eulerAngles.z;
+        //YAngle.value = (lpmsModel.transform.rotation.y) * 180;
+        //ZAngle.value = (lpmsModel.transform.rotation.z) * 180;
+
     }
 
     void homeButtonPressed(){
@@ -93,7 +106,7 @@ public class RecreateScanUIController : MonoBehaviour
     void zeroButtonPressed()
     {
         zeroOffset = lpmsModel.transform.rotation*zeroOffset;
-        Debug.Log("zero offset: " + zeroOffset);
+        //Debug.Log("zero offset: " + zeroOffset);
     }
 
     IEnumerator ShowLoadDialogCoroutine()
