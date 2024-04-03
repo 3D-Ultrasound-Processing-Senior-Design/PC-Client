@@ -70,13 +70,13 @@ public class RecreateScanUIController : MonoBehaviour
 
         //Debug.Log("Euler Angles: " + lpmsModel.transform.eulerAngles);
         XAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle;
-        Debug.Log(" value imported : " + xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle);
+        //Debug.Log(" value imported : " + xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle);
         //XAngle.value = lpmsModel.transform.eulerAngles.x; //lpmsModel.transform.eulerAngles.x;
-        YAngle.value = (lpmsModel.transform.eulerAngles.y);//(float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().yEulerAngle; // 
-        if (YAngle.value > 180)
+        YAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().yEulerAngle; // 
+        /*if (YAngle.value > 180)
         {
             YAngle.value = YAngle.value - 360;
-        }
+        }*/
         ZAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().zEulerAngle; // lpmsModel.transform.eulerAngles.z;
         //YAngle.value = (lpmsModel.transform.rotation.y) * 180;
         //ZAngle.value = (lpmsModel.transform.rotation.z) * 180;

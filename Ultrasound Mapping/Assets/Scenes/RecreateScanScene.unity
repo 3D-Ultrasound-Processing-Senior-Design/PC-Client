@@ -397,6 +397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zeroOffset: {x: 0, y: 0, z: 0, w: 1}
+  xEulerAngleObject: {fileID: 1968778367}
   lpmsModel: {fileID: 1968778367}
   lpmsModel_grayed: {fileID: 0}
   fileManagerObject: {fileID: 0}
@@ -766,6 +767,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zeroOffsetObject: {fileID: 0}
   zeroOffset: {x: 0, y: 0, z: 0, w: 0}
+  xEulerAngle: 0
+  yEulerAngle: 0
+  zEulerAngle: 0
   isConnected: 0
 --- !u!1001 &579884201
 PrefabInstance:
@@ -1530,6 +1534,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zeroOffsetObject: {fileID: 70844423}
   zeroOffset: {x: 0, y: 0, z: 0, w: 0}
+  xEulerAngle: 0
+  yEulerAngle: 0
+  zEulerAngle: 0
   isConnected: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
