@@ -20,6 +20,7 @@ public class RecreateScanUIController : MonoBehaviour
     public Button homeButton;
     public Button loadButton;
     public Button zeroButton;
+    public Button saveButton;
 
     // these three for the "grayed out" model.
     public FloatField targetX;
@@ -46,6 +47,7 @@ public class RecreateScanUIController : MonoBehaviour
         loadButton = root.rootVisualElement.Q<Button>("LoadButton");
         connectText = root.rootVisualElement.Q<Label>("ConnectLabel");
         zeroButton = root.rootVisualElement.Q<Button>("ZeroButton");
+        saveButton = root.rootVisualElement.Q<Button>("SaveButton");
 
         targetX = root.rootVisualElement.Q<FloatField>("TargetX");
         targetY = root.rootVisualElement.Q<FloatField>("TargetY");
@@ -61,6 +63,7 @@ public class RecreateScanUIController : MonoBehaviour
         homeButton.clicked += homeButtonPressed; // make button call function
         loadButton.clicked += loadButtonPressed; // assign the appropriate callback function.
         zeroButton.clicked += zeroButtonPressed;
+        saveButton.clicked += saveButtonPressed;
     }
 
 
@@ -95,6 +98,20 @@ public class RecreateScanUIController : MonoBehaviour
         connectText.text = "IMU Connected";
         connectText.style.color = new StyleColor(Color.green);
         //connectText.text.color = Color.green;
+    }
+    void saveButtonPressed()
+    {
+        Debug.Log("save scan button pressed");
+
+        StartCoroutine(ShowSaveDialogCoroutine());
+    }
+    IEnumerator ShowSaveDialogCoroutine()
+    {
+        yield return FileBrowser.WaitForSaveDialog(FileBrowser.PickMode.Files, true, null, null, "Save", "Save");
+        Debug.Log(FileBrowser.Success);
+        Debug.Log("file saved successfully ");
+        if (FileBrowser.Success)
+            OnFilesSelectedSave(FileBrowser.Result);
     }
     void loadButtonPressed()
     {
@@ -173,4 +190,25 @@ public class RecreateScanUIController : MonoBehaviour
 		string destinationPath = Path.Combine( Application.persistentDataPath, FileBrowserHelpers.GetFilename( filePath ) );
 		FileBrowserHelpers.CopyFile( filePath, destinationPath );
 	}
+    void OnFilesSelectedSave(string[] filepaths)
+    {
+
+        // Print paths of the selected files
+        for (int i = 0; i < filepaths.Length; i++)
+            Debug.Log(filepaths[i]);
+
+        // Get the file path of the first selected file
+        string filePath = filepaths[0];
+
+        string scanData = lpmsModel.transform.rotation.x.ToString() + ","+ lpmsModel.transform.rotation.y.ToString() +","+ lpmsModel.transform.rotation.z.ToString() +","+ lpmsModel.transform.rotation.w.ToString();
+
+        if (filePath.Length != 0)
+        {
+            using (var stream = File.Open(filePath, FileMode.Append))
+            using (var writer = new StreamWriter(stream))
+            {
+                writer.WriteLine(scanData);
+            }
+        }
+    }
 }

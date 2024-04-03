@@ -231,6 +231,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8acf23c11c774164f873b2a7f464e20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zeroOffsetObject: {fileID: 335268928}
+  zeroOffset: {x: 0, y: 0, z: 0, w: 0}
+  xEulerAngle: 0
+  yEulerAngle: 0
+  zEulerAngle: 0
   isConnected: 0
 --- !u!4 &113414463 stripped
 Transform:
@@ -1273,6 +1278,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8acf23c11c774164f873b2a7f464e20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zeroOffsetObject: {fileID: 0}
+  zeroOffset: {x: 0, y: 0, z: 0, w: 0}
+  xEulerAngle: 0
+  yEulerAngle: 0
+  zEulerAngle: 0
   isConnected: 0
 --- !u!1 &1823471052
 GameObject:
