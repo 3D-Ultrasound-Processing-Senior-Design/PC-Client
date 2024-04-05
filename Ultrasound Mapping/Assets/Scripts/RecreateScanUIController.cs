@@ -166,6 +166,8 @@ public class RecreateScanUIController : MonoBehaviour
         
         // apparently C# has a garbage collector so we don't need to delete this.
         List<float> listA = new List<float>();
+
+        Quaternion sensorOrientation;
         while (!reader.EndOfStream)
         {   
             var line = reader.ReadLine();
@@ -174,17 +176,19 @@ public class RecreateScanUIController : MonoBehaviour
             {
                 listA.Add( float.Parse( item, CultureInfo.InvariantCulture.NumberFormat) );
             }
+            sensorOrientation = new Quaternion(listA[0], listA[1], listA[2], listA[3]);
+            // move the grayed out model to the correct orientation
+            lpmsModel_grayed.transform.rotation = sensorOrientation;//Quaternion.Euler(targetX.value, targetY.value, targetZ.value);
             foreach (var coloumn1 in listA)
             {
-                targetX.value = listA[0];
-                targetY.value = listA[1];
-                targetZ.value = listA[2];
+                targetX.value = sensorOrientation.eulerAngles.x;    //listA[0];
+                targetY.value = sensorOrientation.eulerAngles.y;    //listA[1];
+                targetZ.value = sensorOrientation.eulerAngles.z;    //listA[2];
                 Debug.Log( coloumn1 );
             }
         }
 
-        // move the grayed out model to the correct orientation
-        lpmsModel_grayed.transform.rotation = Quaternion.Euler(targetX.value, targetY.value, targetZ.value);
+
 
         // Or, copy the first file to persistentDataPath
 		string destinationPath = Path.Combine( Application.persistentDataPath, FileBrowserHelpers.GetFilename( filePath ) );
@@ -204,7 +208,7 @@ public class RecreateScanUIController : MonoBehaviour
 
         if (filePath.Length != 0)
         {
-            using (var stream = File.Open(filePath, FileMode.Append))
+            using (var stream = File.Open(filePath + ".csv", FileMode.Append))
             using (var writer = new StreamWriter(stream))
             {
                 writer.WriteLine(scanData);
