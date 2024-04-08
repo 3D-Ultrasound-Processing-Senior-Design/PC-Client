@@ -398,6 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zeroOffset: {x: 0, y: 0, z: 0, w: 1}
   xEulerAngleObject: {fileID: 1968778367}
+  scanData: 
   lpmsModel: {fileID: 1968778367}
   lpmsModel_grayed: {fileID: 0}
   fileManagerObject: {fileID: 0}
@@ -629,13 +630,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474736488}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.9396927, z: 0.34202018, w: 0}
-  m_LocalPosition: {x: -10, y: 45, z: 14}
+  m_LocalRotation: {x: -0.6963643, y: -0.6963643, z: -0.122787856, w: -0.122787856}
+  m_LocalPosition: {x: -20, y: 20, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 140, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 180, y: -20, z: 270}
 --- !u!1001 &538250628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1371,7 +1372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 334b4b79853bc9844be5760c63fcffdf, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071068
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 334b4b79853bc9844be5760c63fcffdf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1383,7 +1384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 334b4b79853bc9844be5760c63fcffdf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -5501067142014219231, guid: 334b4b79853bc9844be5760c63fcffdf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1445,6 +1446,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bba247bdc123ced4e8ca3bc5dcea105b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: bba247bdc123ced4e8ca3bc5dcea105b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bba247bdc123ced4e8ca3bc5dcea105b, type: 3}
