@@ -15,7 +15,8 @@ public class RecreateScanUIController : MonoBehaviour
 {
     public Quaternion zeroOffset = Quaternion.identity;
     public GameObject xEulerAngleObject;
-        
+
+    public string scanData;
 
     public Button homeButton;
     public Button loadButton;
@@ -70,16 +71,17 @@ public class RecreateScanUIController : MonoBehaviour
     void Update()
     {
         // irf-todo: check that the opaque model works when you have the actual imu on hand.
-
-        //Debug.Log("Euler Angles: " + lpmsModel.transform.eulerAngles);
-        XAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle;
         //Debug.Log(" value imported : " + xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle);
         //XAngle.value = lpmsModel.transform.eulerAngles.x; //lpmsModel.transform.eulerAngles.x;
-        YAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().yEulerAngle; // 
+        //Debug.Log("Euler Angles: " + lpmsModel.transform.eulerAngles);
         /*if (YAngle.value > 180)
-        {
-            YAngle.value = YAngle.value - 360;
-        }*/
+{
+    YAngle.value = YAngle.value - 360;
+}*/
+        XAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle;
+
+        YAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().yEulerAngle; // 
+
         ZAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().zEulerAngle; // lpmsModel.transform.eulerAngles.z;
         //YAngle.value = (lpmsModel.transform.rotation.y) * 180;
         //ZAngle.value = (lpmsModel.transform.rotation.z) * 180;
@@ -102,7 +104,8 @@ public class RecreateScanUIController : MonoBehaviour
     void saveButtonPressed()
     {
         Debug.Log("save scan button pressed");
-
+        scanData = lpmsModel.transform.rotation.x.ToString() + "," + lpmsModel.transform.rotation.y.ToString() + "," + lpmsModel.transform.rotation.z.ToString() + "," + lpmsModel.transform.rotation.w.ToString()
+                   + "," + XAngle.value + "," + YAngle.value + "," + ZAngle.value;
         StartCoroutine(ShowSaveDialogCoroutine());
     }
     IEnumerator ShowSaveDialogCoroutine()
@@ -166,6 +169,8 @@ public class RecreateScanUIController : MonoBehaviour
         
         // apparently C# has a garbage collector so we don't need to delete this.
         List<float> listA = new List<float>();
+
+        Quaternion sensorOrientation;
         while (!reader.EndOfStream)
         {   
             var line = reader.ReadLine();
@@ -174,17 +179,19 @@ public class RecreateScanUIController : MonoBehaviour
             {
                 listA.Add( float.Parse( item, CultureInfo.InvariantCulture.NumberFormat) );
             }
+            sensorOrientation = new Quaternion(listA[0], listA[1], listA[2], listA[3]);
+            // move the grayed out model to the correct orientation
+            lpmsModel_grayed.transform.rotation = sensorOrientation;//Quaternion.Euler(targetX.value, targetY.value, targetZ.value);
             foreach (var coloumn1 in listA)
             {
-                targetX.value = listA[0];
-                targetY.value = listA[1];
-                targetZ.value = listA[2];
+                targetX.value = listA[4]; //sensorOrientation.eulerAngles.x;    //
+                targetY.value = listA[5];
+                targetZ.value = listA[6];
                 Debug.Log( coloumn1 );
             }
         }
 
-        // move the grayed out model to the correct orientation
-        lpmsModel_grayed.transform.rotation = Quaternion.Euler(targetX.value, targetY.value, targetZ.value);
+
 
         // Or, copy the first file to persistentDataPath
 		string destinationPath = Path.Combine( Application.persistentDataPath, FileBrowserHelpers.GetFilename( filePath ) );
@@ -200,11 +207,11 @@ public class RecreateScanUIController : MonoBehaviour
         // Get the file path of the first selected file
         string filePath = filepaths[0];
 
-        string scanData = lpmsModel.transform.rotation.x.ToString() + ","+ lpmsModel.transform.rotation.y.ToString() +","+ lpmsModel.transform.rotation.z.ToString() +","+ lpmsModel.transform.rotation.w.ToString();
+
 
         if (filePath.Length != 0)
         {
-            using (var stream = File.Open(filePath, FileMode.Append))
+            using (var stream = File.Open(filePath + ".csv", FileMode.Append))
             using (var writer = new StreamWriter(stream))
             {
                 writer.WriteLine(scanData);

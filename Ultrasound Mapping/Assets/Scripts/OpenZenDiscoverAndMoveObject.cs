@@ -121,7 +121,14 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         // run as long as there are new OpenZen events to process
         while (true)
         {
-            zeroOffset = zeroOffsetObject.GetComponent<RecreateScanUIController>().zeroOffset;
+            try
+            {
+                zeroOffset = zeroOffsetObject.GetComponent<RecreateScanUIController>().zeroOffset;
+            }
+            catch
+            {
+                Debug.Log("Zero Offset Does not exist in this context");
+            }
 
             //Debug.Log("zero offset in OpenZen controller: " + zeroOffset); 
 

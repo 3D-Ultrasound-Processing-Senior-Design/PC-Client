@@ -25,15 +25,11 @@ public class MainUIController : MonoBehaviour
         //homeButton = root.rootVisualElement.Q<Button>("HomeButton"); // setting the button to the var
         textTest = root.rootVisualElement.Q<Label>("TextTest"); // setting the text to the var
 
-        newScanButton.clicked += NewScanButtonPressed; // make button call function
+        //newScanButton.clicked += NewScanButtonPressed; // make button call function
         recreateScanButton.clicked += RecreateScanButtonPressed; // make button call function
 
     }
 
-    void NewScanButtonPressed(){ // when "New Scan" Button is pressed
-        Debug.Log("new scan func");
-        SceneManager.LoadScene("NewScanScene"); // load next scene
-    }
     void RecreateScanButtonPressed(){ // when "Recreate Scene" Button is pressed
         Debug.Log("recreate scan func");
         SceneManager.LoadScene("RecreateScanScene"); // load next scene
