@@ -25,8 +25,6 @@
 }
 
 .button-style:hover {
-    height: 100px;
-    width: 212px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -35,12 +33,11 @@
     border-right-width: 0;
     border-top-width: 0;
     border-bottom-width: 0;
-    background-color: rgb(164, 164, 164);
+    scale: 1.1 1.1;
+    transition-delay: 0.1s;
 }
 
 .button-style:active {
-    height: 100px;
-    width: 212px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -49,14 +46,13 @@
     border-right-width: 2px;
     border-top-width: 2px;
     border-bottom-width: 2px;
-    background-color: rgb(125, 125, 125);
+    background-color: rgb(77, 140, 231);
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;
     border-bottom-width: 0;
     scale: 1.1 1.1;
-    -unity-background-image-tint-color: rgb(209, 209, 209);
-    background-color: rgb(76, 140, 233);
+    transition-duration: 0.1s;
 }
 
 .tabeItem-style {
