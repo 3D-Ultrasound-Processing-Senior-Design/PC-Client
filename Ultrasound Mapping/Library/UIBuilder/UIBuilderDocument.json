@@ -64,13 +64,13 @@
                     "UxmlPath": "Assets/UI Assets/RecreateScan.uxml",
                     "CanvasX": 42,
                     "CanvasY": 0,
-                    "CanvasWidth": 1536,
-                    "CanvasHeight": 971,
+                    "CanvasWidth": 1920,
+                    "CanvasHeight": 1080,
                     "MatchGameView": false,
-                    "ZoomScale": 0.5,
+                    "ZoomScale": 0.4000000059604645,
                     "PanOffset": {
-                        "x": 52.63421630859375,
-                        "y": 41.647918701171878
+                        "x": -33.302764892578128,
+                        "y": 93.45415496826172
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,
