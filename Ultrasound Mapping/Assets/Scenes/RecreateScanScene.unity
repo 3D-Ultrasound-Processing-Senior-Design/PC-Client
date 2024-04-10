@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731332, g: 0.13414454, b: 0.12108202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: b59b865b8662b5841a01fd753fcb7d28, type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -256,13 +256,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59589198}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 425022476}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 180}
 --- !u!64 &59589200
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -396,10 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714f106d1794d5d488e428f5bf3f5a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zeroOffset: {x: 0, y: 0, z: 0, w: 1}
-  xEulerAngleObject: {fileID: 1968778367}
-  scanData: 
-  lpmsModel: {fileID: 1968778367}
+  lpmsModel: {fileID: 0}
   lpmsModel_grayed: {fileID: 0}
   fileManagerObject: {fileID: 0}
 --- !u!1 &425022475
@@ -630,13 +627,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474736488}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6532815, y: -0.6532815, z: -0.27059805, w: -0.27059805}
-  m_LocalPosition: {x: -34, y: 20, z: 14}
+  m_LocalRotation: {x: 0, y: -0.9396927, z: 0.34202018, w: 0}
+  m_LocalPosition: {x: -10, y: 45, z: 14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 180, y: -45, z: 270}
+  m_LocalEulerAnglesHint: {x: 140, y: 0, z: 180}
 --- !u!1001 &538250628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -766,11 +763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8acf23c11c774164f873b2a7f464e20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zeroOffsetObject: {fileID: 0}
-  zeroOffset: {x: 0, y: 0, z: 0, w: 0}
-  xEulerAngle: 0
-  yEulerAngle: 0
-  zEulerAngle: 0
   isConnected: 0
 --- !u!1001 &579884201
 PrefabInstance:
@@ -1256,7 +1248,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1315,13 +1307,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834929892}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.9659259, y: -0, z: 0.258819, w: 0}
-  m_LocalPosition: {x: -34, y: 22, z: 14}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 180, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1889190681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1372,7 +1364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 334b4b79853bc9844be5760c63fcffdf, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 334b4b79853bc9844be5760c63fcffdf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1384,7 +1376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 334b4b79853bc9844be5760c63fcffdf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -5501067142014219231, guid: 334b4b79853bc9844be5760c63fcffdf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1448,10 +1440,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: bba247bdc123ced4e8ca3bc5dcea105b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bba247bdc123ced4e8ca3bc5dcea105b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1490,19 +1478,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bba247bdc123ced4e8ca3bc5dcea105b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bba247bdc123ced4e8ca3bc5dcea105b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: bba247bdc123ced4e8ca3bc5dcea105b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: bba247bdc123ced4e8ca3bc5dcea105b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1537,20 +1517,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8acf23c11c774164f873b2a7f464e20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zeroOffsetObject: {fileID: 70844423}
-  zeroOffset: {x: 0, y: 0, z: 0, w: 0}
-  xEulerAngle: 0
-  yEulerAngle: 0
-  zEulerAngle: 0
   isConnected: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1834929894}
+  - {fileID: 474736491}
   - {fileID: 1308466424}
   - {fileID: 70844425}
   - {fileID: 425022476}
-  - {fileID: 474736491}
   - {fileID: 1968778366}
   - {fileID: 538250628}

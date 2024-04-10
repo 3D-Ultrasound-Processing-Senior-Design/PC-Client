@@ -13,15 +13,9 @@ using System.Globalization;
 
 public class RecreateScanUIController : MonoBehaviour
 {
-    public Quaternion zeroOffset = Quaternion.identity;
-    public GameObject xEulerAngleObject;
-
-    public string scanData;
 
     public Button homeButton;
     public Button loadButton;
-    public Button zeroButton;
-    public Button saveButton;
 
     // these three for the "grayed out" model.
     public FloatField targetX;
@@ -47,8 +41,6 @@ public class RecreateScanUIController : MonoBehaviour
         homeButton = root.rootVisualElement.Q<Button>("HomeButton"); // setting the text to the var
         loadButton = root.rootVisualElement.Q<Button>("LoadButton");
         connectText = root.rootVisualElement.Q<Label>("ConnectLabel");
-        zeroButton = root.rootVisualElement.Q<Button>("ZeroButton");
-        saveButton = root.rootVisualElement.Q<Button>("SaveButton");
 
         targetX = root.rootVisualElement.Q<FloatField>("TargetX");
         targetY = root.rootVisualElement.Q<FloatField>("TargetY");
@@ -63,29 +55,15 @@ public class RecreateScanUIController : MonoBehaviour
 
         homeButton.clicked += homeButtonPressed; // make button call function
         loadButton.clicked += loadButtonPressed; // assign the appropriate callback function.
-        zeroButton.clicked += zeroButtonPressed;
-        saveButton.clicked += saveButtonPressed;
     }
 
 
     void Update()
     {
         // irf-todo: check that the opaque model works when you have the actual imu on hand.
-        //Debug.Log(" value imported : " + xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle);
-        //XAngle.value = lpmsModel.transform.eulerAngles.x; //lpmsModel.transform.eulerAngles.x;
-        //Debug.Log("Euler Angles: " + lpmsModel.transform.eulerAngles);
-        /*if (YAngle.value > 180)
-{
-    YAngle.value = YAngle.value - 360;
-}*/
-        XAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle;
-
-        YAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().yEulerAngle; // 
-
-        ZAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().zEulerAngle; // lpmsModel.transform.eulerAngles.z;
-        //YAngle.value = (lpmsModel.transform.rotation.y) * 180;
-        //ZAngle.value = (lpmsModel.transform.rotation.z) * 180;
-
+        XAngle.value = (lpmsModel.transform.rotation.x) * 180;
+        YAngle.value = (lpmsModel.transform.rotation.y) * 180;
+        ZAngle.value = (lpmsModel.transform.rotation.z) * 180;
     }
 
     void homeButtonPressed(){
@@ -101,32 +79,12 @@ public class RecreateScanUIController : MonoBehaviour
         connectText.style.color = new StyleColor(Color.green);
         //connectText.text.color = Color.green;
     }
-    void saveButtonPressed()
-    {
-        Debug.Log("save scan button pressed");
-        scanData = lpmsModel.transform.rotation.x.ToString() + "," + lpmsModel.transform.rotation.y.ToString() + "," + lpmsModel.transform.rotation.z.ToString() + "," + lpmsModel.transform.rotation.w.ToString()
-                   + "," + XAngle.value + "," + YAngle.value + "," + ZAngle.value;
-        StartCoroutine(ShowSaveDialogCoroutine());
-    }
-    IEnumerator ShowSaveDialogCoroutine()
-    {
-        yield return FileBrowser.WaitForSaveDialog(FileBrowser.PickMode.Files, true, null, null, "Save", "Save");
-        Debug.Log(FileBrowser.Success);
-        Debug.Log("file saved successfully ");
-        if (FileBrowser.Success)
-            OnFilesSelectedSave(FileBrowser.Result);
-    }
     void loadButtonPressed()
     {
         Debug.Log("load scan button pressed");
         
         // simple file manager co-routine
         StartCoroutine( ShowLoadDialogCoroutine() );
-    }
-    void zeroButtonPressed()
-    {
-        zeroOffset = lpmsModel.transform.rotation*zeroOffset;
-        //Debug.Log("zero offset: " + zeroOffset);
     }
 
     IEnumerator ShowLoadDialogCoroutine()
@@ -169,8 +127,6 @@ public class RecreateScanUIController : MonoBehaviour
         
         // apparently C# has a garbage collector so we don't need to delete this.
         List<float> listA = new List<float>();
-
-        Quaternion sensorOrientation;
         while (!reader.EndOfStream)
         {   
             var line = reader.ReadLine();
@@ -179,43 +135,20 @@ public class RecreateScanUIController : MonoBehaviour
             {
                 listA.Add( float.Parse( item, CultureInfo.InvariantCulture.NumberFormat) );
             }
-            sensorOrientation = new Quaternion(listA[0], listA[1], listA[2], listA[3]);
-            // move the grayed out model to the correct orientation
-            lpmsModel_grayed.transform.rotation = sensorOrientation;//Quaternion.Euler(targetX.value, targetY.value, targetZ.value);
             foreach (var coloumn1 in listA)
             {
-                targetX.value = listA[4]; //sensorOrientation.eulerAngles.x;    //
-                targetY.value = listA[5];
-                targetZ.value = listA[6];
+                targetX.value = listA[0];
+                targetY.value = listA[1];
+                targetZ.value = listA[2];
                 Debug.Log( coloumn1 );
             }
         }
 
-
+        // move the grayed out model to the correct orientation
+        lpmsModel_grayed.transform.rotation = Quaternion.Euler(targetX.value, targetY.value, targetZ.value);
 
         // Or, copy the first file to persistentDataPath
 		string destinationPath = Path.Combine( Application.persistentDataPath, FileBrowserHelpers.GetFilename( filePath ) );
 		FileBrowserHelpers.CopyFile( filePath, destinationPath );
 	}
-    void OnFilesSelectedSave(string[] filepaths)
-    {
-
-        // Print paths of the selected files
-        for (int i = 0; i < filepaths.Length; i++)
-            Debug.Log(filepaths[i]);
-
-        // Get the file path of the first selected file
-        string filePath = filepaths[0];
-
-
-
-        if (filePath.Length != 0)
-        {
-            using (var stream = File.Open(filePath + ".csv", FileMode.Append))
-            using (var writer = new StreamWriter(stream))
-            {
-                writer.WriteLine(scanData);
-            }
-        }
-    }
 }

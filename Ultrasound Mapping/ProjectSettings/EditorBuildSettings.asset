@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RecreateScanScene.unity
     guid: 4e178a467adc6b44fb50296670b0fc85
+  - enabled: 1
+    path: Assets/Scenes/HowToScene.unity
+    guid: 5eba94583d4d9504abb804b5ca792323
   m_configObjects: {}
