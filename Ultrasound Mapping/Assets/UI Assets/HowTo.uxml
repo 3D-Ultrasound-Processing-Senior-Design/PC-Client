@@ -1,6 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="Backround" style="flex-grow: 1; background-color: rgb(160, 192, 211);">
-        <ui:VisualElement name="Text" style="flex-grow: 1; width: 762px; height: -76px; background-image: url(&apos;project://database/Assets/UI%20Assets/TextBox%201.png?fileID=2800000&amp;guid=e5682ac1831e7e64488ae31032c0fd1b&amp;type=3#TextBox 1&apos;); -unity-background-scale-mode: scale-to-fit; transform-origin: right bottom; -unity-font: url(&apos;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=3d309790917b5a74a86f4997ac3b7799&amp;type=3#NotInter-Regular&apos;);" />
-        <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-self: flex-end; align-items: auto; flex-direction: row-reverse; width: 1174px; justify-content: space-between; transform-origin: right top; translate: 0 -556px;" />
-    </ui:VisualElement>
-</ui:UXML>

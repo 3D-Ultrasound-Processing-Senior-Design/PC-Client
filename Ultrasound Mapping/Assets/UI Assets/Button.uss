@@ -5,18 +5,26 @@
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    width: 240px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;
     border-bottom-width: 0;
     background-color: rgb(255, 255, 255);
+    background-color: rgb(87, 155, 254);
     font-size: 40px;
     align-items: stretch;
+    -unity-font-definition: initial;
+    -unity-font: url('project://database/Assets/UI%20Assets/Fonts/Helvetica.ttf?fileID=12800000&guid=84ed528f9c109904f8f19a7b1d94dac0&type=3#Helvetica');
+    color: rgb(255, 255, 255);
+    transition-duration: 0.35s;
 }
 
 .button-style:hover {
-    height: 100px;
-    width: 212px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -25,12 +33,11 @@
     border-right-width: 0;
     border-top-width: 0;
     border-bottom-width: 0;
-    background-color: rgb(164, 164, 164);
+    scale: 1.1 1.1;
+    transition-delay: 0.1s;
 }
 
 .button-style:active {
-    height: 100px;
-    width: 212px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -39,5 +46,34 @@
     border-right-width: 2px;
     border-top-width: 2px;
     border-bottom-width: 2px;
-    background-color: rgb(125, 125, 125);
+    background-color: rgb(77, 140, 231);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    scale: 1.1 1.1;
+    transition-duration: 0.1s;
+}
+
+.tabeItem-style {
+    -unity-font: url('project://database/Assets/UI%20Assets/Fonts/Helvetica-Bold.ttf?fileID=12800000&guid=2ab7c1fde9b6e2e4f978f149f96ca71e&type=3#Helvetica-Bold');
+    font-size: 25px;
+    -unity-text-align: upper-center;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    width: 75px;
+}
+
+.tableLabel-style {
+    -unity-font: url('project://database/Assets/UI%20Assets/Fonts/Helvetica.ttf?fileID=12800000&guid=84ed528f9c109904f8f19a7b1d94dac0&type=3#Helvetica');
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 200px;
+    height: 50px;
 }
