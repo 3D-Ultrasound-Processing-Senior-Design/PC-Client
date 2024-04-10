@@ -9,13 +9,6 @@ using UnityEngine.UI;
  */
 public class OpenZenDiscoverAndMoveObject : MonoBehaviour
 {
-    public GameObject zeroOffsetObject;
-    public Quaternion zeroOffset;
-
-    public double xEulerAngle;
-    public double yEulerAngle;
-    public double zEulerAngle;
-
     struct SensorListResult
     {
         public string IoType;
@@ -45,7 +38,6 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         // create OpenZen and start asynchronous sensor discovery
         OpenZen.ZenInit(mZenHandle);
         OpenZen.ZenListSensorsAsync(mZenHandle);
-        
 
         reCreateObject = FindObjectOfType<RecreateScanUIController>();
 
@@ -121,17 +113,6 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         // run as long as there are new OpenZen events to process
         while (true)
         {
-            try
-            {
-                zeroOffset = zeroOffsetObject.GetComponent<RecreateScanUIController>().zeroOffset;
-            }
-            catch
-            {
-                Debug.Log("Zero Offset Does not exist in this context");
-            }
-
-            //Debug.Log("zero offset in OpenZen controller: " + zeroOffset); 
-
             ZenEvent zenEvent = new ZenEvent();
             // read all events which are waiting for us
             // use the rotation from the newest IMU event
@@ -186,10 +167,6 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
                         OpenZenFloatArray fa = OpenZenFloatArray.frompointer(zenEvent.data.imuData.a);
                         // read euler angles
                         OpenZenFloatArray fr = OpenZenFloatArray.frompointer(zenEvent.data.imuData.r);
-                        Debug.Log("euler angles: " + fr.getitem(0) + "   " + fr.getitem(1) + "  " + fr.getitem(2) );
-                        xEulerAngle = fr.getitem(0);
-                        yEulerAngle = fr.getitem(1);
-                        zEulerAngle = fr.getitem(2);
                         // read quaternion
                         OpenZenFloatArray fq = OpenZenFloatArray.frompointer(zenEvent.data.imuData.q);
 
@@ -197,11 +174,10 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
                         // Furthermore, y and z axis need to be flipped to 
                         // convert between the LPMS and Unity coordinate system
                         Quaternion sensorOrientation = new Quaternion(fq.getitem(1),
-                                                                    -fq.getitem(2), //originally -
-                                                                    -fq.getitem(3), //originally -
+                                                                    -fq.getitem(2),
+                                                                    -fq.getitem(3),
                                                                     fq.getitem(0));
-                        transform.rotation = sensorOrientation * Quaternion.Inverse(zeroOffset);
-                        //Debug.Log("zero offset in OpenZen controller: " + zeroOffset);
+                        transform.rotation = sensorOrientation;
                         break;
                 }
             }
