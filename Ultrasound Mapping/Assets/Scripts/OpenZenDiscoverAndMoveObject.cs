@@ -23,7 +23,7 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         public uint BaudRate;
     }
     
-    NewScanUIController uiGameObject; // declare object from new scan UI
+    //NewScanUIController uiGameObject; // declare object from new scan UI
     RecreateScanUIController reCreateObject;
 
     Dropdown mDropdownSensorSelect;
@@ -41,7 +41,7 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        uiGameObject = FindObjectOfType<NewScanUIController>();
+        //uiGameObject = FindObjectOfType<NewScanUIController>();
         // create OpenZen and start asynchronous sensor discovery
         OpenZen.ZenInit(mZenHandle);
         OpenZen.ZenListSensorsAsync(mZenHandle);
@@ -81,7 +81,7 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         if (sensorInitError == ZenSensorInitError.ZenSensorInitError_None)
         {
             print("Succesfully connected to sensor");
-            uiGameObject.IMUConnected();
+            //uiGameObject.IMUConnected();
             reCreateObject.IMUConnected();
             //mConnectCanvas.SetActive(false);
             //mErrorConnect.SetActive(false);
