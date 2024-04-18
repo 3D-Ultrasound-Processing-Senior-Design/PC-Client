@@ -676,7 +676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e5682ac1831e7e64488ae31032c0fd1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c294924766ef3f47a850a4dc1dac522, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -918,6 +918,10 @@ MonoBehaviour:
   instructions: {fileID: 1677522572}
   photo: {fileID: 1007125911}
   MainMenuSprite: {fileID: 21300000, guid: 127196c0333792b489dd5872396a3a68, type: 3}
+  PreviousButton: {fileID: 0}
+  HomeButton: {fileID: 0}
+  NextButton: {fileID: 0}
+  num: 0
 --- !u!1 &1472178170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1037,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee8a01560c129bc4e8bf433be444959c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 34e51fae948e71d49ac4dc37a8b3d7bb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1066,6 +1070,10 @@ MonoBehaviour:
   instructions: {fileID: 0}
   photo: {fileID: 0}
   MainMenuSprite: {fileID: 0}
+  PreviousButton: {fileID: 0}
+  HomeButton: {fileID: 0}
+  NextButton: {fileID: 0}
+  num: 0
 --- !u!1 &1599931070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,6 +1311,10 @@ MonoBehaviour:
   instructions: {fileID: 1677522572}
   photo: {fileID: 1007125911}
   MainMenuSprite: {fileID: 21300000, guid: 005ba742da73c7e4ea62d25ee4e707ad, type: 3}
+  PreviousButton: {fileID: 0}
+  HomeButton: {fileID: 0}
+  NextButton: {fileID: 0}
+  num: 0
 --- !u!114 &1614214586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1489,7 +1501,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 0
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1519,7 +1531,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 18.836426, y: 15.06543, z: 9.427551, w: 20.725403}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
