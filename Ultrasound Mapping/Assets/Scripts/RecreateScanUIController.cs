@@ -7,6 +7,7 @@ using SimpleFileBrowser;
 using System.IO;
 using UnityEditor;
 using System.Text;
+using System;
 
 // to access CultureInfo
 using System.Globalization;
@@ -22,6 +23,7 @@ public class RecreateScanUIController : MonoBehaviour
     public Button loadButton;
     public Button zeroButton;
     public Button saveButton;
+    public Label connectedLabel;
 
     // these three for the "grayed out" model.
     public FloatField targetX;
@@ -49,6 +51,7 @@ public class RecreateScanUIController : MonoBehaviour
         connectText = root.rootVisualElement.Q<Label>("ConnectLabel");
         zeroButton = root.rootVisualElement.Q<Button>("ZeroButton");
         saveButton = root.rootVisualElement.Q<Button>("SaveButton");
+        connectedLabel = root.rootVisualElement.Q<Label>("ConnectLabel");
 
         targetX = root.rootVisualElement.Q<FloatField>("TargetX");
         targetY = root.rootVisualElement.Q<FloatField>("TargetY");
@@ -78,15 +81,16 @@ public class RecreateScanUIController : MonoBehaviour
 {
     YAngle.value = YAngle.value - 360;
 }*/
-        XAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle;
+        XAngle.value = MathF.Round((float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().xEulerAngle,1);
 
-        YAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().yEulerAngle; // 
+        YAngle.value = MathF.Round((float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().yEulerAngle,1); // 
 
-        ZAngle.value = (float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().zEulerAngle; // lpmsModel.transform.eulerAngles.z;
+        ZAngle.value = MathF.Round((float)xEulerAngleObject.GetComponent<OpenZenDiscoverAndMoveObject>().zEulerAngle,1); // lpmsModel.transform.eulerAngles.z;
         //YAngle.value = (lpmsModel.transform.rotation.y) * 180;
         //ZAngle.value = (lpmsModel.transform.rotation.z) * 180;
 
     }
+    
 
     void homeButtonPressed(){
         FileBrowser.HideDialog(true);
@@ -95,11 +99,13 @@ public class RecreateScanUIController : MonoBehaviour
     }
 
     public void IMUConnected(){
-        Debug.Log("re create scan imu connected function called...");
-        Debug.Log("Set Text to COnnected");
-        connectText.text = "IMU Connected";
-        connectText.style.color = new StyleColor(Color.green);
+        Color greenColor = new Color(0.854902f, 0.9333334f, 0.3215686f);
+        Debug.Log("IMU CONNECTED");
+        connectText.text = "LPMS: Connected";
+        //connectText.style.color = new StyleColor(Color.green);
         //connectText.text.color = Color.green;
+        connectedLabel.style.backgroundColor = greenColor;
+
     }
     void saveButtonPressed()
     {
