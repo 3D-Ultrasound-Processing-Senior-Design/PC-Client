@@ -6,13 +6,12 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-
 public class HowToController : MonoBehaviour
 {
     public TextMeshProUGUI instructions;
     public Image photo;
     public Sprite MainMenuSprite;
-    private int num;
+    public int num;
     void Start()
     {
         num = 1;
