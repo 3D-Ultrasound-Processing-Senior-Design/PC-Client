@@ -653,8 +653,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -642.05066, y: 310.8814}
-  m_SizeDelta: {x: 635.8906, y: 458.2361}
+  m_AnchoredPosition: {x: -642.05066, y: 85}
+  m_SizeDelta: {x: 635.8906, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002888013
 MonoBehaviour:
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e5682ac1831e7e64488ae31032c0fd1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1bff33fb1a96f8446923163c63cb0a73, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -728,8 +728,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 198.7539, y: 88.636}
-  m_SizeDelta: {x: 1045.718, y: 902.73}
+  m_AnchoredPosition: {x: 312, y: 88.636}
+  m_SizeDelta: {x: 1200, y: 902.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1007125911
 MonoBehaviour:
@@ -806,7 +806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 432, y: -408}
+  m_AnchoredPosition: {x: 432, y: -451}
   m_SizeDelta: {x: 242.2881, y: 91.2729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1420318301
@@ -918,6 +918,19 @@ MonoBehaviour:
   instructions: {fileID: 1677522572}
   photo: {fileID: 1007125911}
   MainMenuSprite: {fileID: 21300000, guid: 127196c0333792b489dd5872396a3a68, type: 3}
+  sptite1: {fileID: 0}
+  sprite2: {fileID: 0}
+  sprite3: {fileID: 0}
+  sprite4: {fileID: 0}
+  sprite5: {fileID: 0}
+  sprite6: {fileID: 0}
+  sprite7: {fileID: 0}
+  sprite8: {fileID: 0}
+  sprite9: {fileID: 0}
+  PreviousButton: {fileID: 0}
+  HomeButton: {fileID: 0}
+  NextButton: {fileID: 0}
+  num: 0
 --- !u!1 &1472178170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1046,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee8a01560c129bc4e8bf433be444959c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4bca93f6bdabe3f408b82c97993dde44, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1066,6 +1079,19 @@ MonoBehaviour:
   instructions: {fileID: 0}
   photo: {fileID: 0}
   MainMenuSprite: {fileID: 0}
+  sptite1: {fileID: 0}
+  sprite2: {fileID: 0}
+  sprite3: {fileID: 0}
+  sprite4: {fileID: 0}
+  sprite5: {fileID: 0}
+  sprite6: {fileID: 0}
+  sprite7: {fileID: 0}
+  sprite8: {fileID: 0}
+  sprite9: {fileID: 0}
+  PreviousButton: {fileID: 0}
+  HomeButton: {fileID: 0}
+  NextButton: {fileID: 0}
+  num: 0
 --- !u!1 &1599931070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,7 +1311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 703.8561, y: -408.36356}
+  m_AnchoredPosition: {x: 703.8561, y: -454}
   m_SizeDelta: {x: 242.2881, y: 91.2729}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614214585
@@ -1303,6 +1329,19 @@ MonoBehaviour:
   instructions: {fileID: 1677522572}
   photo: {fileID: 1007125911}
   MainMenuSprite: {fileID: 21300000, guid: 005ba742da73c7e4ea62d25ee4e707ad, type: 3}
+  sptite1: {fileID: 0}
+  sprite2: {fileID: 0}
+  sprite3: {fileID: 21300000, guid: bd6a298a93b24ef48b9751acadff3df4, type: 3}
+  sprite4: {fileID: 0}
+  sprite5: {fileID: 0}
+  sprite6: {fileID: 0}
+  sprite7: {fileID: 0}
+  sprite8: {fileID: 0}
+  sprite9: {fileID: 0}
+  PreviousButton: {fileID: 0}
+  HomeButton: {fileID: 0}
+  NextButton: {fileID: 0}
+  num: 0
 --- !u!114 &1614214586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,7 +1558,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 17.19629, z: 0, w: -427.25696}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
