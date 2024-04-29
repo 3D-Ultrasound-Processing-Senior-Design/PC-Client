@@ -185,7 +185,7 @@ public class RecreateScanUIController : MonoBehaviour
             {
                 listA.Add( float.Parse( item, CultureInfo.InvariantCulture.NumberFormat) );
             }
-            sensorOrientation = new Quaternion(listA[0], -1f * listA[1], -1f * listA[2], listA[3]);
+            sensorOrientation = new Quaternion(listA[0], listA[1], listA[2], listA[3]);
             // move the grayed out model to the correct orientation
             lpmsModel_grayed.transform.rotation = sensorOrientation;//Quaternion.Euler(targetX.value, targetY.value, targetZ.value);
             foreach (var coloumn1 in listA)
