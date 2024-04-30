@@ -182,15 +182,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: NEXT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a85fe9af03a84e84f95e4118c5b0dc1b, type: 2}
+  m_sharedMaterial: {fileID: -1779135353833894311, guid: a85fe9af03a84e84f95e4118c5b0dc1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -207,13 +207,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 32
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -653,7 +653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -642.05066, y: 85}
+  m_AnchoredPosition: {x: -618, y: 80}
   m_SizeDelta: {x: 635.8906, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002888013
@@ -729,7 +729,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 312, y: 88.636}
-  m_SizeDelta: {x: 1200, y: 902.73}
+  m_SizeDelta: {x: 1152, y: 648}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1007125911
 MonoBehaviour:
@@ -878,7 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.34117648, g: 0.60784316, b: 0.99607843, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -918,15 +918,17 @@ MonoBehaviour:
   instructions: {fileID: 1677522572}
   photo: {fileID: 1007125911}
   MainMenuSprite: {fileID: 21300000, guid: 127196c0333792b489dd5872396a3a68, type: 3}
-  sptite1: {fileID: 0}
-  sprite2: {fileID: 0}
-  sprite3: {fileID: 0}
-  sprite4: {fileID: 0}
-  sprite5: {fileID: 0}
-  sprite6: {fileID: 0}
-  sprite7: {fileID: 0}
-  sprite8: {fileID: 0}
-  sprite9: {fileID: 0}
+  sptite1: {fileID: 21300000, guid: 41b373196e32193479a91e7937b45665, type: 3}
+  sprite2: {fileID: 21300000, guid: 56468f15e4f90f54692f4df6e5cb7419, type: 3}
+  sprite3: {fileID: 21300000, guid: bd6a298a93b24ef48b9751acadff3df4, type: 3}
+  sprite4: {fileID: 21300000, guid: 5bf52d24557791f4fa0b8931c6cfc4af, type: 3}
+  sprite5: {fileID: 21300000, guid: 14878db460b67794ca2f5fe79d055352, type: 3}
+  sprite6: {fileID: 21300000, guid: a108f70ecfebc7c4d9580e3b358efe89, type: 3}
+  sprite7: {fileID: 21300000, guid: 60c931d53f9707c42b600555796dcc64, type: 3}
+  sprite8: {fileID: 21300000, guid: 14878db460b67794ca2f5fe79d055352, type: 3}
+  sprite9: {fileID: 21300000, guid: 67a37229c52639245815c57ab5e919c7, type: 3}
+  sprite10: {fileID: 21300000, guid: a094f39b44be50c4db982aa2dd121fac, type: 3}
+  sprite11: {fileID: 21300000, guid: 21867be7a1a0e5c46b371839f05ee95c, type: 3}
   PreviousButton: {fileID: 0}
   HomeButton: {fileID: 0}
   NextButton: {fileID: 0}
@@ -1088,6 +1090,8 @@ MonoBehaviour:
   sprite7: {fileID: 0}
   sprite8: {fileID: 0}
   sprite9: {fileID: 0}
+  sprite10: {fileID: 0}
+  sprite11: {fileID: 0}
   PreviousButton: {fileID: 0}
   HomeButton: {fileID: 0}
   NextButton: {fileID: 0}
@@ -1151,15 +1155,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Previous
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a85fe9af03a84e84f95e4118c5b0dc1b, type: 2}
+  m_sharedMaterial: {fileID: -1779135353833894311, guid: a85fe9af03a84e84f95e4118c5b0dc1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1176,13 +1180,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1328,16 +1332,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instructions: {fileID: 1677522572}
   photo: {fileID: 1007125911}
-  MainMenuSprite: {fileID: 21300000, guid: 005ba742da73c7e4ea62d25ee4e707ad, type: 3}
-  sptite1: {fileID: 0}
-  sprite2: {fileID: 0}
+  MainMenuSprite: {fileID: 21300000, guid: 41b373196e32193479a91e7937b45665, type: 3}
+  sptite1: {fileID: 21300000, guid: 41b373196e32193479a91e7937b45665, type: 3}
+  sprite2: {fileID: 21300000, guid: 56468f15e4f90f54692f4df6e5cb7419, type: 3}
   sprite3: {fileID: 21300000, guid: bd6a298a93b24ef48b9751acadff3df4, type: 3}
-  sprite4: {fileID: 0}
-  sprite5: {fileID: 0}
-  sprite6: {fileID: 0}
-  sprite7: {fileID: 0}
-  sprite8: {fileID: 0}
-  sprite9: {fileID: 0}
+  sprite4: {fileID: 21300000, guid: 5bf52d24557791f4fa0b8931c6cfc4af, type: 3}
+  sprite5: {fileID: 21300000, guid: 14878db460b67794ca2f5fe79d055352, type: 3}
+  sprite6: {fileID: 21300000, guid: a108f70ecfebc7c4d9580e3b358efe89, type: 3}
+  sprite7: {fileID: 21300000, guid: 60c931d53f9707c42b600555796dcc64, type: 3}
+  sprite8: {fileID: 21300000, guid: 14878db460b67794ca2f5fe79d055352, type: 3}
+  sprite9: {fileID: 21300000, guid: 67a37229c52639245815c57ab5e919c7, type: 3}
+  sprite10: {fileID: 21300000, guid: a094f39b44be50c4db982aa2dd121fac, type: 3}
+  sprite11: {fileID: 21300000, guid: 21867be7a1a0e5c46b371839f05ee95c, type: 3}
   PreviousButton: {fileID: 0}
   HomeButton: {fileID: 0}
   NextButton: {fileID: 0}
@@ -1411,7 +1417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.34117648, g: 0.60784316, b: 0.99607843, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1470,8 +1476,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -645.9883, y: 306.62305}
-  m_SizeDelta: {x: 579.921, y: 412.3617}
+  m_AnchoredPosition: {x: -618, y: 285}
+  m_SizeDelta: {x: 579.921, y: 428.615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1677522572
 MonoBehaviour:
@@ -1493,12 +1499,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome. The Goal of this program is to help you refind the orientation
-    of your ultrasound probe when making multiple scans. Press the next button when
-    you are ready to continue:'
+  m_text: Welcome. The Goal of this program is to help you refind the orientation
+    of your ultrasound probe when making multiple scans. Press the Next button when
+    you are ready to continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a85fe9af03a84e84f95e4118c5b0dc1b, type: 2}
+  m_sharedMaterial: {fileID: -1779135353833894311, guid: a85fe9af03a84e84f95e4118c5b0dc1b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

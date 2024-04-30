@@ -3,7 +3,22 @@ guid: a0dbdab8d599aa54ea48dd7bb22d2368
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - instructions: {instanceID: 0}
+  - photo: {instanceID: 0}
+  - MainMenuSprite: {instanceID: 0}
+  - sptite1: {instanceID: 0}
+  - sprite2: {instanceID: 0}
+  - sprite3: {instanceID: 0}
+  - sprite4: {instanceID: 0}
+  - sprite5: {fileID: 21300000, guid: 3666c579a665c51448436ccce4130abf, type: 3}
+  - sprite6: {instanceID: 0}
+  - sprite7: {instanceID: 0}
+  - sprite8: {instanceID: 0}
+  - sprite9: {instanceID: 0}
+  - PreviousButton: {instanceID: 0}
+  - HomeButton: {instanceID: 0}
+  - NextButton: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
