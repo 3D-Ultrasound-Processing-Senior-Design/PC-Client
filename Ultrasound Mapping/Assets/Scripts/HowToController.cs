@@ -12,35 +12,78 @@ public class HowToController : MonoBehaviour
     public TextMeshProUGUI instructions;
     public Image photo;
     public Sprite MainMenuSprite;
-    private int num;
+    public Sprite sptite1,sprite2,sprite3, sprite4, sprite5, sprite6, sprite7, sprite8, sprite9, sprite10, sprite11;
+    public Button PreviousButton, HomeButton, NextButton;
+    //public TMP_text 
+    
+    public int num;
+    public const string inst1 = "Welcome. The Goal of this program is to help you refind the orientation of your ultrasound probe when making multiple scans. Press the Next button when you are ready to continue.";
+    public const string inst2 = "Place the probe where you plan on setting the origin of the IMU and plug the IMU into the computer using a USB cable. For best results place the part of the ultrasound that touches the body facing the same direction as the back of the computer screen, as shown in picture. Additionally, do not keep the device and probe within 6 inches of the computer as it will interfere with the gyroscope and magnetometer.";
+    public const string inst3 = "To begin a scan one would select the 'Scan' button.";
+    public const string inst4 = "This screen will take a few seconds to recognize that the IMU is connected. There is an indicator on the right of the UI that will indicate if the IMU is connected (LPMS: Not Found or LPMS: Connected). Once it recognizes the connection the IMU, the model of the ultrasound probe will begin to move in the program as you move it in space.";
+    public const string inst5 = "To begin taking New Scan, the first step is to zero out the IMU. Place the probe where you would like to set the origin of the orientation. It is important to remember where this position is, in order to re-zero the probe before replicating the scan. Press the ‘Zero’ button";
+    public const string inst6 = "Now you may take the ultrasound scan as you normally would. When you have the image you want on the ultrasound machine, press the ‘Save Scan’ button as simultaneously as possible. This will save the orientation of the probe at the time the button is clicked.";
+    public const string inst7 = "This button will bring up a file explorer, where you can set the name and location of the .csv file that you save the orientation in. Name the file something that you can find again, and then click save. If you later want to look at the orientation data, you can open this .csv in Excel or Google Sheets.";
+    public const string inst8 = "When you are ready to recreate the scan, place the probe in the position and location in which you zeroed the IMU on your initial scan. Press the ‘Zero’ button.";
+    public const string inst9 = "To load the orientation data from a previous scan, press the ‘Load Scan’ Button. This will pull up a File Explorer in which you can select the .csv file with the orientation data you are trying to replicate.";
+    public const string inst10 = "A grayed version of the ultrasound probe will appear at the orientation when the scan you are replicating was taken. Place the ultrasound probe on the patient's body where the scan you are trying to replicate was taken. In this position you can change the orientation of the ultrasound probe and the changes will be seen by the non-grayed probe on the screen.";
+    public const string inst11 = "You can use the models to overlay the two images of the grayed and un grayed probe to match the previous orientation. You can also look at the angles of rotation around the X, Y, and Z axis. As you change the orientation of the probe the current angles will display those changes. You can compare your current angles to your previous angles to replicate the scan. Once the angles or probe models match you can take the image on the ultrasound machine as you normally would.";
+
+    //public TextMeshProUGUI.text inst1,inst2,inst3;
     void Start()
     {
-        num = 1;
+        num = 0;
+
     }
     public void ButtonDemo()
     {
-        switch(num)
+        num ++;
+        string instCapture = instructions.GetComponent<TextMeshProUGUI>().text;
+        switch(instCapture)
         {
-            case 0:
-                instructions.GetComponent<TextMeshProUGUI>().text = "Welcome. The Goal of this program is to help you refind the orientation of your ultrasound probe when making multiple scans. Press the next button when you are ready to continue:";
-                num++;
-                break; 
-            case 1:
+            case inst1:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst2;
                 photo.sprite = MainMenuSprite;
-                instructions.GetComponent<TextMeshProUGUI>().text = "The main menu consists of multiple options,\n click next to continue";
-                num++;
+                break;  
+            case inst2:
+                photo.sprite = sprite3;
+                instructions.GetComponent<TextMeshProUGUI>().text = inst3;
                 break;                
-            case 2:
-                instructions.GetComponent<TextMeshProUGUI>().text = "The first time you scan a location, you will click 'New Scan' \n click next to continue";
-                num++;
+            case inst3:
+                photo.sprite = sprite4;
+                instructions.GetComponent<TextMeshProUGUI>().text = inst4;
                 break;
-            case 3:
-                instructions.GetComponent<TextMeshProUGUI>().text = "Place Holder,\n click next to continue";
-                num++;
+            case inst4:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst5;
+                photo.sprite = sprite5;
+                break;
+            case inst5:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst6;
+                photo.sprite = sprite6;
+                break;
+            case inst6:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst7;
+                photo.sprite = sprite7;
+                break;
+            case inst7:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst8;
+                photo.sprite = sprite8;
+                break;
+            case inst8:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst9;
+                photo.sprite = sprite9;
+                break;
+            case inst9:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst10;
+                photo.sprite = sprite10;
+                break;
+            case inst10:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst11;
+                photo.sprite = sprite11;
                 break;
             default:
-                instructions.GetComponent<TextMeshProUGUI>().text = "Place Holder,\n click next to continue";
-                num++;
+                instructions.GetComponent<TextMeshProUGUI>().text = inst1;
+                photo.sprite = MainMenuSprite;
                 break;
         }
     
@@ -48,28 +91,54 @@ public class HowToController : MonoBehaviour
     }
     public void ButtonPrevious()
     {
-        num--;
-        if(num < 0)
+
+        string instCapture = instructions.GetComponent<TextMeshProUGUI>().text;
+        switch(instCapture)
         {
-            num = 0;
-        }
-        switch(num)
-        {
-            case 0:
-                instructions.GetComponent<TextMeshProUGUI>().text = "Welcome. The Goal of this program is to help you refind the orientation of your ultrasound probe when making multiple scans. Press the next button when you are ready to continue:";
-                break; 
-            case 1:
+            case inst2:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst1;
                 photo.sprite = MainMenuSprite;
-                instructions.GetComponent<TextMeshProUGUI>().text = "The main menu consists of multiple options,\n click next to continue";
+                break; 
+
+            case inst3:
+                photo.sprite = MainMenuSprite;
+                instructions.GetComponent<TextMeshProUGUI>().text = inst2;
                 break;                
-            case 2:
-                instructions.GetComponent<TextMeshProUGUI>().text = "The first time you scan a location, you will click 'New Scan' \n click next to continue";
+            case inst4:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst3;
+                photo.sprite = sprite3;
                 break;
-            case 3:
-                instructions.GetComponent<TextMeshProUGUI>().text = "Place Holder,\n click next to continue";
+            case inst5:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst4;
+                photo.sprite = sprite4;
+                break;
+            case inst6:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst5;
+                photo.sprite = sprite5;
+                break;
+            case inst7:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst6;
+                photo.sprite = sprite6;
+                break;
+            case inst8:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst7;
+                photo.sprite = sprite7;
+                break;
+            case inst9:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst8;
+                photo.sprite = sprite8;
+                break;
+            case inst10:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst9;
+                photo.sprite = sprite9;
+                break;
+            case inst11:
+                instructions.GetComponent<TextMeshProUGUI>().text = inst10;
+                photo.sprite = sprite10;
                 break;
             default:
-                instructions.GetComponent<TextMeshProUGUI>().text = "Place Holder,\n click next to continue";
+                instructions.GetComponent<TextMeshProUGUI>().text = inst1;
+                photo.sprite = MainMenuSprite;
                 break;
         }
     }

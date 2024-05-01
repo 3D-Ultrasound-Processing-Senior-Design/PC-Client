@@ -12,22 +12,22 @@
             <ui:VisualElement name="TargetTableLabel" style="flex-grow: 0; height: 90px; background-color: rgb(218, 238, 82); flex-shrink: 0; justify-content: flex-start; width: 200px; flex-basis: initial; flex-wrap: nowrap;">
                 <ui:Label tabindex="-1" text="Target Angle" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TargetAngle" style="height: auto; -unity-font: url(&apos;project://database/Assets/UI%20Assets/Fonts/Helvetica.ttf?fileID=12800000&amp;guid=84ed528f9c109904f8f19a7b1d94dac0&amp;type=3#Helvetica&apos;); -unity-text-align: middle-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; justify-content: flex-end; align-self: center; font-size: 30px; align-items: stretch; top: 30px;" />
             </ui:VisualElement>
-            <ui:Label tabindex="-1" text="Target X" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TargetXLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
+            <ui:Label tabindex="-1" text="Target Roll" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TargetXLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
             <ui:FloatField value="42.2" name="TargetX" class="tabeItem-style" style="width: 100px;" />
-            <ui:Label tabindex="-1" text="Target Y" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TargetYLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
+            <ui:Label tabindex="-1" text="Target Pitch" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TargetYLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
             <ui:FloatField value="42.2" name="TargetY" class="tabeItem-style" style="width: 100px;" />
-            <ui:Label tabindex="-1" text="Target Z&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TargetZLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
+            <ui:Label tabindex="-1" text="Target Yaw&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TargetZLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
             <ui:FloatField value="42.2" name="TargetZ" class="tabeItem-style" style="width: 100px;" />
         </ui:VisualElement>
         <ui:VisualElement name="CurrentTable" style="flex-grow: 0; width: 200px; height: 600px; top: -750px; left: 300px; background-color: rgb(87, 155, 254); flex-shrink: 0;">
             <ui:VisualElement name="CurrentTableLabel" style="flex-grow: 0; height: 90px; background-color: rgb(218, 238, 82); flex-shrink: 0; justify-content: flex-start; width: 200px; flex-basis: initial; flex-wrap: nowrap;">
                 <ui:Label tabindex="-1" text="Current Angle" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CurrentAngle" style="height: auto; -unity-font: url(&apos;project://database/Assets/UI%20Assets/Fonts/Helvetica.ttf?fileID=12800000&amp;guid=84ed528f9c109904f8f19a7b1d94dac0&amp;type=3#Helvetica&apos;); -unity-text-align: middle-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; justify-content: flex-end; align-self: center; font-size: 30px; align-items: stretch; top: 30px;" />
             </ui:VisualElement>
-            <ui:Label tabindex="-1" text="Current X" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CurrentXLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
+            <ui:Label tabindex="-1" text="Current Roll" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CurrentXLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
             <ui:FloatField value="42.2" name="actualX" class="tabeItem-style" style="font-size: 24px; height: 49px; width: 100px;" />
-            <ui:Label tabindex="-1" text="Current Y" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CurrentYLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
+            <ui:Label tabindex="-1" text="Current Pitch" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CurrentYLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
             <ui:FloatField value="42.2" name="actualY" class="tabeItem-style" style="font-size: 24px; width: 100px;" />
-            <ui:Label tabindex="-1" text="Current Z" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CurrentZLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
+            <ui:Label tabindex="-1" text="Current Yaw" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CurrentZLabel" class="tableLabel-style" style="-unity-text-align: upper-center; height: 20px;" />
             <ui:FloatField value="42.2" name="actualZ" class="tabeItem-style" style="font-size: 24px; width: 100px;" />
         </ui:VisualElement>
     </ui:VisualElement>

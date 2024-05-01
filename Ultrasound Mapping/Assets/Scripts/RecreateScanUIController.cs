@@ -131,8 +131,26 @@ public class RecreateScanUIController : MonoBehaviour
     }
     void zeroButtonPressed()
     {
-        zeroOffset = lpmsModel.transform.rotation*zeroOffset;
-        //Debug.Log("zero offset: " + zeroOffset);
+        //FindObjectOfType<RecreateScanUIController>();
+        ////lpmsModel.GetComponent<OpenZenDiscoverAndMoveObject>().OnDestroy();
+        ////lpmsModel.transform.eulerAngles = new Vector3(0, 0, 0);
+        ////ExampleCoroutine();
+        ////Debug.Log("Attempting reconnect");
+        ////lpmsModel.GetComponent<OpenZenDiscoverAndMoveObject>().onConnectButtonClicked();
+        zeroOffset = lpmsModel.transform.rotation * zeroOffset;
+        zeroOffset = new Quaternion(zeroOffset.x, zeroOffset.y, zeroOffset.z, zeroOffset.w);
+        Debug.Log("zero offset: " + zeroOffset);
+    }
+    IEnumerator ExampleCoroutine()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(5);
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
 
     IEnumerator ShowLoadDialogCoroutine()

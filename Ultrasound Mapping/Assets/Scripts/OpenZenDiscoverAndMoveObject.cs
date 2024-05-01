@@ -61,9 +61,9 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         // mConnectButton.onClick.AddListener(onConnectButtonClicked);
     }
 
-    void onConnectButtonClicked()
+    public void onConnectButtonClicked()
     {
-        Debug.Log("BUTTON CLICKED");
+        Debug.Log("CONNECT BUTTON CLICKED");
         //int selectedItem = mDropdownSensorSelect.value;
         var sensorConnectTo = mFoundSensors[0];
 
@@ -81,7 +81,7 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         if (sensorInitError == ZenSensorInitError.ZenSensorInitError_None)
         {
             print("Succesfully connected to sensor");
-            uiGameObject.IMUConnected();
+            //uiGameObject.IMUConnected();
             reCreateObject.IMUConnected();
             //mConnectCanvas.SetActive(false);
             //mErrorConnect.SetActive(false);
@@ -186,7 +186,7 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
                         OpenZenFloatArray fa = OpenZenFloatArray.frompointer(zenEvent.data.imuData.a);
                         // read euler angles
                         OpenZenFloatArray fr = OpenZenFloatArray.frompointer(zenEvent.data.imuData.r);
-                        Debug.Log("euler angles: " + fr.getitem(0) + "   " + fr.getitem(1) + "  " + fr.getitem(2) );
+                        //Debug.Log("euler angles: " + fr.getitem(0) + "   " + fr.getitem(1) + "  " + fr.getitem(2) );
                         xEulerAngle = fr.getitem(0);
                         yEulerAngle = fr.getitem(1);
                         zEulerAngle = fr.getitem(2);
@@ -200,15 +200,23 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
                                                                     -fq.getitem(2), //originally -
                                                                     -fq.getitem(3), //originally -
                                                                     fq.getitem(0));
-                        transform.rotation = sensorOrientation * Quaternion.Inverse(zeroOffset);
-                        //Debug.Log("zero offset in OpenZen controller: " + zeroOffset);
+                        //Quaternion zeroOffsetSwap = zeroOffset
+                        float temp1 = zeroOffset.x;
+                        zeroOffset.x = zeroOffset.y;
+                        zeroOffset.y = temp1;
+                        Quaternion newRotation   = sensorOrientation * Quaternion.Inverse(zeroOffset);
+                        float temp2 = newRotation.x;
+                        newRotation.x = -newRotation.y;
+                        newRotation.y = temp2;
+                        transform.rotation = newRotation;
+                        
                         break;
                 }
             }
         }
     }
 
-    void OnDestroy()
+    public void OnDestroy()
     {
         if (mSensorHandle != null)
         {
@@ -216,5 +224,6 @@ public class OpenZenDiscoverAndMoveObject : MonoBehaviour
         }
         OpenZen.ZenShutdown(mZenHandle);
     }
+   
 
 }

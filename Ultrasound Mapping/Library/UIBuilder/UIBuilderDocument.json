@@ -24,12 +24,34 @@
                             "instanceID": 0
                         },
                         "m_OldPath": "Assets/UI Assets/Button.uss"
+                    },
+                    {
+                        "m_StyleSheet": {
+                            "fileID": 7433441132597879392,
+                            "guid": "1537e0a1acae1184db0758c2ebd97be5",
+                            "type": 3
+                        },
+                        "m_BackupStyleSheet": {
+                            "instanceID": 0
+                        },
+                        "m_OldPath": "Assets/UI Assets/HomeButtom.uss"
+                    },
+                    {
+                        "m_StyleSheet": {
+                            "fileID": 7433441132597879392,
+                            "guid": "1fd355d0d95a31f459a2a546d12dec33",
+                            "type": 3
+                        },
+                        "m_BackupStyleSheet": {
+                            "instanceID": 0
+                        },
+                        "m_OldPath": "Assets/UI Assets/HomeButton2.uss"
                     }
                 ],
-                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Assets/MainMenu.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/UI Assets/RecreateScan.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "3b0910c9968bda24ab9a6c8518b666eb",
+                    "guid": "bb507f8e78b86894ea4254b805cbe780",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
@@ -38,27 +60,27 @@
                     "type": 3
                 },
                 "m_Settings": {
-                    "UxmlGuid": "3b0910c9968bda24ab9a6c8518b666eb",
-                    "UxmlPath": "Assets/UI Assets/MainMenu.uxml",
-                    "CanvasX": 82,
+                    "UxmlGuid": "bb507f8e78b86894ea4254b805cbe780",
+                    "UxmlPath": "Assets/UI Assets/RecreateScan.uxml",
+                    "CanvasX": 42,
                     "CanvasY": 0,
-                    "CanvasWidth": 1458,
-                    "CanvasHeight": 765,
+                    "CanvasWidth": 1920,
+                    "CanvasHeight": 1080,
                     "MatchGameView": false,
                     "ZoomScale": 0.4000000059604645,
                     "PanOffset": {
-                        "x": -4.337646484375,
-                        "y": 174.83958435058595
+                        "x": 26.697235107421876,
+                        "y": 103.05416107177735
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,
                     "CameraModeCanvasBackgroundOpacity": 1.0,
-                    "EnableCanvasBackground": true,
+                    "EnableCanvasBackground": false,
                     "CanvasBackgroundMode": 0,
                     "CanvasBackgroundColor": {
-                        "r": 1.0,
-                        "g": 1.0,
-                        "b": 1.0,
+                        "r": 0.0,
+                        "g": 0.0,
+                        "b": 0.0,
                         "a": 255.0
                     },
                     "CanvasBackgroundImage": {
