@@ -11,11 +11,12 @@ This repository holds the software for ENSC24-43's PC-Client software.
   which will let your device talk to the IMU over usb. When downloading the driver select the
   "universal" one.
 
-1. First download this repository as a `.zip` folder.
-2. Once the folder is downloaded, you can copy the `3D_UltraSound_Tool_Executable.zip` file
+1. First download this repository as a `.zip` folder. Click the green code button towards the top
+   of the page and at the bottom of the dialogue there will be a download to zip option.
+3. Once the folder is downloaded, you can copy the `3D_UltraSound_Tool_Executable.zip` file
    to where you want to keep the program on your machine.
-3. Right-click the file and select "Extract."
-4. At this point you should have a folder with the executable files in it.
+4. Right-click the file and select "Extract."
+5. At this point you should have a folder with the executable files in it.
 
 - To run the software, double click the `Ultrasound Mapping.exe` file.
 
